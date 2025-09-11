@@ -10,12 +10,18 @@ export default function TopBar() {
           <FontAwesomeIcon icon={faLocationDot} />
           Store Location: Lincoln- 344, Illinois, Chicago, USA
         </p>
-        <div>
-          <button className="text-sm">
-            Eng <FontAwesomeIcon icon={faArrowDown} className="" />
+        <div className="flex">
+          <button className="text-sm flex items-center gap-1 mr-4">
+            Eng{" "}
+            <span className="rotate-90 inline-block font-bold text-lg">
+              {">"}
+            </span>
           </button>
-          <button className="text-sm">
-            USD <FontAwesomeIcon icon={faArrowDown} className="" />
+          <button className="text-sm flex items-center gap-1 mr-4">
+            USD{" "}
+            <span className="rotate-90 inline-block font-medium text-lg">
+              {">"}
+            </span>
           </button>
         </div>
       </div>
