@@ -10,3 +10,9 @@
     --color-warning: #ff8a00; 
     --color-danger: #ea4b48; 
 }
+
+@layer components {
+    *{
+        font-family: poppins;
+    }
+}

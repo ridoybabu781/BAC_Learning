@@ -1,78 +1,78 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowDown,
-  faHeart,
-  faLeaf,
-  faLocationDot,
-  faPhone,
-  faSearch,
-  faShoppingBag,
-  faUser,
+    faArrowDown,
+    faChevronDown,
+    faHeart,
+    faLeaf,
+    faLocationDot,
+    faPhone,
+    faSearch,
+    faShoppingBag,
+    faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { BagIcon, HeartIcon, MagnifyingGlassIcon, PhoneCallIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon } from "@phosphor-icons/react";
+
+let navData = [
+    { name: "Home", link: "/", downArray: true },
+    { name: "Shop", link: "/", downArray: true },
+    { name: "Pages", link: "/", downArray: true },
+    { name: "Blogs", link: "/", downArray: true },
+    { name: "About Us", link: "/", downArray: false },
+];
 
 export default function Navbar() {
-  return (
-    <div className="bg-green-100 shadow-lg sticky top-0 z-50">
-      <div className="bg-white ">
-        <div className="max-w-7xl m-auto flex justify-between  py-2 px-1">
-          <div>
-            <ul className="flex gap-4 ">
-              <li>
-                <Link to={"/"} className="hover:text-green-700 ">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to={"/shop"} className="hover:text-green-700 ">
-                  Shop
-                </Link>
-              </li>
-              <li>
-                <Link to={"/pages"} className="hover:text-green-700 ">
-                  Pages
-                </Link>
-              </li>
-              <li>
-                <Link to={"/blog"} className="hover:text-green-700 ">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to={"/aboutus"} className="hover:text-green-700 ">
-                  About Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="font-[600]">
-            <FontAwesomeIcon icon={faLeaf} className="text-green-500" />
-            RR-Commerce
-          </div>
-          <div className="flex gap-4">
-            <button>
-              <FontAwesomeIcon icon={faPhone} />
-              +8801735699781
-            </button>
-            <button>
-              <FontAwesomeIcon icon={faSearch} />
-            </button>
-            <button>
-              <FontAwesomeIcon icon={faHeart} />
-            </button>
-            <button className="relative">
-              <span className="absolute bg-green-400 text-white rounded-full p-0 -top-1 -right-2 px-1 text-xs">
-                0
-              </span>
-              <FontAwesomeIcon icon={faShoppingBag} />
-            </button>
-            <button>
-              <FontAwesomeIcon icon={faUser} />
-            </button>
-          </div>
+    return (
+        <div className='bg-green-100 shadow-lg sticky top-0 z-50'>
+            <div className='bg-white py-7'>
+                <div className='max-w-7xl m-auto flex justify-between items-center py-2 px-1'>
+                    <div className='flex gap-7'>
+                        {navData.map((item, index) => {
+                            return (
+                                <div
+                                    className='space-x-2 text-gray-600'
+                                    key={index}
+                                >
+                                    <a href={item.link}> {item.name}</a>
+                                    {item.downArray ? (
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    ) : null}
+                                </div>
+                            );
+                        })}
+                    </div>
+                    <div className='text-3xl flex items-center gap-2'>
+                        <FontAwesomeIcon
+                            icon={faLeaf}
+                            className='text-green-500'
+                        />
+                        Ecobazar
+                    </div>
+                    <div className='flex items-center gap-10'>
+                        <div className='gap-5'>
+                            <button className='flex items-center gap-2'>
+                                <PhoneCallIcon size={32} />
+                                <span className="text-gray-600">+880 1735 699781</span>
+                            </button>
+                        </div>
+                        <div className='flex items-center gap-5'>
+                             <span>
+                                <MagnifyingGlassIcon size={36}/>
+                             </span>
+                             <span>
+                                <HeartIcon size={36}/>
+                             </span>
+                             <span>
+                                <ShoppingCartIcon size={36}/>
+                             </span>
+                             <span>
+                                <UserIcon size={36}/>
+                             </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
