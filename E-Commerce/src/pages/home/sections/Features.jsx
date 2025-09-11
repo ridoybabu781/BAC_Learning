@@ -46,7 +46,7 @@ let FeaturesSection = () => {
                                 />
                                 <div className='space-y-2'>
                                     <h4 className='text-xl font-semibold'>
-                                        <item className='title'></item>
+                                        <p className='title'></p>
                                     </h4>
                                     <p className='text-gray-500'>
                                         {item.subTitle}
