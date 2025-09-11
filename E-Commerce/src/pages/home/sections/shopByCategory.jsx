@@ -9,6 +9,8 @@ import drinks from "../../../assets/img/category-icons/soft-drink 1.png";
 import snacks from "../../../assets/img/category-icons/snacks 1.png";
 import { useRef } from "react";
 
+import sectionBg from '../../../assets/img/BG2.png'
+
 let CategoryCard = ({ data }) => {
     let { image, title, productCount } = data;
     return (
@@ -71,7 +73,7 @@ let ShopByCategory = () => {
         });
     };
     return (
-        <div className='container m-auto mb-12'>
+        <div className={' m-auto py-10 bg-cover mb-12'} style={{backgroundImage : `url(${sectionBg})`}}>
             <SectionTitleBar
                 title={"Shop by Top Categories"}
                 nextPageLink={"/"}
