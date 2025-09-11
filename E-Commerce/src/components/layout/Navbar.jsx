@@ -12,7 +12,7 @@ import {
     faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { BagIcon, HeartIcon, MagnifyingGlassIcon, PhoneCallIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon } from "@phosphor-icons/react";
+import { BagIcon, CaretDownIcon, HeartIcon, MagnifyingGlassIcon, PhoneCallIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon } from "@phosphor-icons/react";
 
 let navData = [
     { name: "Home", link: "/", downArray: true },
@@ -31,12 +31,12 @@ export default function Navbar() {
                         {navData.map((item, index) => {
                             return (
                                 <div
-                                    className='space-x-2 text-gray-600'
+                                    className='space-x-2 text-gray-600 flex items-center gap-2'
                                     key={index}
                                 >
                                     <a href={item.link}> {item.name}</a>
                                     {item.downArray ? (
-                                        <FontAwesomeIcon icon={faChevronDown} />
+                                        <CaretDownIcon size={16} />
                                     ) : null}
                                 </div>
                             );
