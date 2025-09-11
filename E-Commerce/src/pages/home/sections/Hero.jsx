@@ -8,7 +8,7 @@ export default function Hero() {
     return (
         <div className='relative py-20' style={{ background: `url(${BG})` }}>
             <div className=' container m-auto flex h-full items-center  relative'>
-                <div className='w-1/2 pr-11'>
+                <div className='w-1/2 pr-6'>
                     <img
                         src={sobjiHero}
                         alt=''

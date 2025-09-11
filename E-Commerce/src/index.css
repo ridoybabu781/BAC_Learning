@@ -9,10 +9,16 @@
     --color-hard-primary: #2c742f ; 
     --color-warning: #ff8a00; 
     --color-danger: #ea4b48; 
+
+    --text-section-heading: 40px;
 }
 
 @layer components {
     *{
         font-family: poppins;
     }
+    
+    .section-heading {
+        @apply text-section-heading font-semibold; 
+    } 
 }
