@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import filterIcon from "../../../assets/img/features/Filter24px.png";
-import categories from "../../../public/categories.json";
+
 import { Star } from "@phosphor-icons/react";
-import productss from "../../../public/product.json";
 import vegitableSalad from "../../../assets/img/vegitableSalad.jpg";
 
 const tags = [
@@ -23,8 +22,21 @@ const tags = [
 ];
 
 export default function Sidebar() {
+  const [productss, setProductss] = useState();
+  const [categories, setCategories] = useState();
+
+  useEffect(() => {
+    fetch("/product.json")
+      .then((res) => res.json())
+      .then((data) => setProductss(data));
+
+    fetch("/categories.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
+
   const [activeTag, setActiveTag] = useState("Low fat");
-  const products = productss.splice(0, 3);
+  const products = productss?.splice(0, 3);
   return (
     <div>
       <button className="bg-green-600 flex text-white py-2 px-6 rounded-full gap-2 items-center">
@@ -125,7 +137,7 @@ export default function Sidebar() {
         <br />
         <h3 className="font-semibold mb-3">Sale Products</h3>
         <div className="flex flex-col gap-3">
-          {products.map((product) => (
+          {products?.map((product) => (
             <div
               key={product.id}
               className={`flex items-center justify-between p-3 rounded-xl border ${

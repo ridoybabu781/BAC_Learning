@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Fresh Food",
+    "description": "Fresh, perishable fruits and vegetables.",
+    "products_count": 165
+  },
+  {
+    "id": "2",
+    "name": "Fish",
+    "description": "Fresh seafood including fish and shrimp.",
+    "products_count": 137
+  },
+  {
+    "id": "3",
+    "name": "Vegetables",
+    "description": "Fresh, organic, healthy vegetables.",
+    "products_count": 34
+  },
+  {
+    "id": "4",
+    "name": "Meat",
+    "description": "Premium cuts of beef, chicken, and pork.",
+    "products_count": 165
+  },
+  {
+    "id": "5",
+    "name": "Drinks",
+    "description": "Hydrating beverages like water and juices.",
+    "products_count": 48
+  },
+  {
+    "id": "6",
+    "name": "Snacks",
+    "description": "Crunchy and tasty chips, nuts, and more.",
+    "products_count": 165
+  }
+]

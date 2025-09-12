@@ -1,0 +1,282 @@
+[
+  {
+    "id": "251594",
+    "name": "Chinese Cabbage",
+    "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.",
+    "price": {
+      "original_price": "$48.00",
+      "discounted_price": "$17.28",
+      "discount_percentage": 64
+    },
+    "availability": "In Stock",
+    "sku": "251594",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Healthy", "Chinese", "Cabbage", "Green Cabbage"],
+    "additional_information": {
+      "weight": "100g",
+      "organic": true,
+      "nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
+    },
+    "images": [
+      "https://example.com/images/product-image-1.jpg",
+      "https://example.com/images/product-image-2.jpg"
+    ],
+    "rating": {
+      "average": 4.6,
+      "count": 128
+    }
+  },
+  {
+    "id": "251595",
+    "name": "Fresh Apples",
+    "description": "Fresh, crunchy apples harvested from local orchards. Perfect for a healthy snack or adding to your favorite dishes.",
+    "price": {
+      "original_price": "$30.00",
+      "discounted_price": "$18.99",
+      "discount_percentage": 37
+    },
+    "availability": "In Stock",
+    "sku": "251595",
+    "brand": "OrchardFresh",
+    "category": "Fresh Food",
+    "tags": ["Fruit", "Fresh", "Healthy", "Apple"],
+    "additional_information": {
+      "weight": "1kg",
+      "organic": true,
+      "nutrition": "1 apple provides 15% of daily fiber."
+    },
+    "images": [
+      "https://example.com/images/fresh-apples-1.jpg",
+      "https://example.com/images/fresh-apples-2.jpg"
+    ],
+    "rating": {
+      "average": 4.8,
+      "count": 254
+    }
+  },
+  {
+    "id": "251596",
+    "name": "Salmon Fillet",
+    "description": "Freshly caught wild salmon fillets, perfect for grilling, baking, or pan-searing.",
+    "price": {
+      "original_price": "$60.00",
+      "discounted_price": "$40.00",
+      "discount_percentage": 33
+    },
+    "availability": "In Stock",
+    "sku": "251596",
+    "brand": "OceanCatch",
+    "category": "Fish",
+    "tags": ["Fish", "Healthy", "Wild", "Salmon"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": false,
+      "nutrition": "Rich in omega-3 fatty acids and protein."
+    },
+    "images": [
+      "https://example.com/images/salmon-fillet-1.jpg",
+      "https://example.com/images/salmon-fillet-2.jpg"
+    ],
+    "rating": {
+      "average": 4.7,
+      "count": 310
+    }
+  },
+  {
+    "id": "251597",
+    "name": "Beef Steak",
+    "description": "Premium cuts of beef steak, tender and juicy, perfect for grilling or pan-searing.",
+    "price": {
+      "original_price": "$80.00",
+      "discounted_price": "$50.00",
+      "discount_percentage": 38
+    },
+    "availability": "In Stock",
+    "sku": "251597",
+    "brand": "PrimeBeef",
+    "category": "Meat",
+    "tags": ["Meat", "Beef", "Steak", "Premium"],
+    "additional_information": {
+      "weight": "400g",
+      "organic": false,
+      "nutrition": "High in protein and iron."
+    },
+    "images": [
+      "https://example.com/images/beef-steak-1.jpg",
+      "https://example.com/images/beef-steak-2.jpg"
+    ],
+    "rating": {
+      "average": 4.3,
+      "count": 189
+    }
+  },
+  {
+    "id": "251598",
+    "name": "Spring Water",
+    "description": "Pure spring water sourced from natural springs. Refreshing and hydrating, ideal for any occasion.",
+    "price": {
+      "original_price": "$5.00",
+      "discounted_price": "$3.50",
+      "discount_percentage": 30
+    },
+    "availability": "In Stock",
+    "sku": "251598",
+    "brand": "SpringFresh",
+    "category": "Drinks",
+    "tags": ["Water", "Hydration", "Natural", "Fresh"],
+    "additional_information": {
+      "weight": "1L",
+      "organic": true,
+      "nutrition": "Contains essential minerals for hydration."
+    },
+    "images": [
+      "https://example.com/images/spring-water-1.jpg",
+      "https://example.com/images/spring-water-2.jpg"
+    ],
+    "rating": {
+      "average": 4.5,
+      "count": 92
+    }
+  },
+  {
+    "id": "251594",
+    "name": "Chinese Cabbage",
+    "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.",
+    "price": {
+      "original_price": "$48.00",
+      "discounted_price": "$17.28",
+      "discount_percentage": 64
+    },
+    "availability": "In Stock",
+    "sku": "251594",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Healthy", "Chinese", "Cabbage", "Green Cabbage"],
+    "additional_information": {
+      "weight": "100g",
+      "organic": true,
+      "nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
+    },
+    "images": [
+      "https://example.com/images/product-image-1.jpg",
+      "https://example.com/images/product-image-2.jpg"
+    ],
+    "rating": {
+      "average": 4.6,
+      "count": 128
+    }
+  },
+  {
+    "id": "251595",
+    "name": "Fresh Apples",
+    "description": "Fresh, crunchy apples harvested from local orchards. Perfect for a healthy snack or adding to your favorite dishes.",
+    "price": {
+      "original_price": "$30.00",
+      "discounted_price": "$18.99",
+      "discount_percentage": 37
+    },
+    "availability": "In Stock",
+    "sku": "251595",
+    "brand": "OrchardFresh",
+    "category": "Fresh Food",
+    "tags": ["Fruit", "Fresh", "Healthy", "Apple"],
+    "additional_information": {
+      "weight": "1kg",
+      "organic": true,
+      "nutrition": "1 apple provides 15% of daily fiber."
+    },
+    "images": [
+      "https://example.com/images/fresh-apples-1.jpg",
+      "https://example.com/images/fresh-apples-2.jpg"
+    ],
+    "rating": {
+      "average": 4.8,
+      "count": 254
+    }
+  },
+  {
+    "id": "251596",
+    "name": "Salmon Fillet",
+    "description": "Freshly caught wild salmon fillets, perfect for grilling, baking, or pan-searing.",
+    "price": {
+      "original_price": "$60.00",
+      "discounted_price": "$40.00",
+      "discount_percentage": 33
+    },
+    "availability": "In Stock",
+    "sku": "251596",
+    "brand": "OceanCatch",
+    "category": "Fish",
+    "tags": ["Fish", "Healthy", "Wild", "Salmon"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": false,
+      "nutrition": "Rich in omega-3 fatty acids and protein."
+    },
+    "images": [
+      "https://example.com/images/salmon-fillet-1.jpg",
+      "https://example.com/images/salmon-fillet-2.jpg"
+    ],
+    "rating": {
+      "average": 4.7,
+      "count": 310
+    }
+  },
+  {
+    "id": "251597",
+    "name": "Beef Steak",
+    "description": "Premium cuts of beef steak, tender and juicy, perfect for grilling or pan-searing.",
+    "price": {
+      "original_price": "$80.00",
+      "discounted_price": "$50.00",
+      "discount_percentage": 38
+    },
+    "availability": "In Stock",
+    "sku": "251597",
+    "brand": "PrimeBeef",
+    "category": "Meat",
+    "tags": ["Meat", "Beef", "Steak", "Premium"],
+    "additional_information": {
+      "weight": "400g",
+      "organic": false,
+      "nutrition": "High in protein and iron."
+    },
+    "images": [
+      "https://example.com/images/beef-steak-1.jpg",
+      "https://example.com/images/beef-steak-2.jpg"
+    ],
+    "rating": {
+      "average": 4.3,
+      "count": 189
+    }
+  },
+  {
+    "id": "251598",
+    "name": "Spring Water",
+    "description": "Pure spring water sourced from natural springs. Refreshing and hydrating, ideal for any occasion.",
+    "price": {
+      "original_price": "$5.00",
+      "discounted_price": "$3.50",
+      "discount_percentage": 30
+    },
+    "availability": "In Stock",
+    "sku": "251598",
+    "brand": "SpringFresh",
+    "category": "Drinks",
+    "tags": ["Water", "Hydration", "Natural", "Fresh"],
+    "additional_information": {
+      "weight": "1L",
+      "organic": true,
+      "nutrition": "Contains essential minerals for hydration."
+    },
+    "images": [
+      "https://example.com/images/spring-water-1.jpg",
+      "https://example.com/images/spring-water-2.jpg"
+    ],
+    "rating": {
+      "average": 4.5,
+      "count": 92
+    }
+  }
+]

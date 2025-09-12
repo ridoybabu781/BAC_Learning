@@ -1,20 +1,26 @@
-import React from "react";
-import products from "../../../public/product.json";
 import ProductCard from "../../../components/ProductCard.jsx";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ProductList() {
+  const [products, setProducts] = useState([]);
+
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
 
+  useEffect(() => {
+    fetch("/product.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   const totalPages = Math.ceil(products.length / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
   const currentProducts = products.slice(startIndex, endIndex);
-  console.log(currentProducts);
+
+  console.log(products);
 
   return (
     <div>
