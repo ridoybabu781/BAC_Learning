@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 export default function SingleProduct() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [selectedPortion, setSelectedPortion] = useState("detailedDescription");
 
   useEffect(() => {
     fetch("/product.json")
@@ -112,14 +113,60 @@ export default function SingleProduct() {
         </div>
       </div>
       <div>
-        <div className="flex ">
-          <button>Detailed Description</button>
-          <button>Additional Information</button>
-          <button> customer Feedback</button>
+        <div className="flex gap-4 mb-2">
+          <button
+            onClick={() => setSelectedPortion("detailedDescription")}
+            className={`border-b-2 pb-1 ${
+              selectedPortion === "detailedDescription"
+                ? "border-green-500"
+                : "border-white"
+            }`}
+          >
+            Detailed Description
+          </button>
+          <button
+            onClick={() => setSelectedPortion("additionalInfo")}
+            className={`border-b-2 pb-1 ${
+              selectedPortion === "additionalInfo"
+                ? "border-green-500"
+                : "border-white"
+            }`}
+          >
+            Additional Information
+          </button>
+          <button
+            onClick={() => setSelectedPortion("customerFeedback")}
+            className={`border-b-2 pb-1 ${
+              selectedPortion === "customerFeedback"
+                ? "border-green-500"
+                : "border-white"
+            }`}
+          >
+            Customer Feedback
+          </button>
         </div>
-        <hr />
+        <hr className="border-gray-200" />
 
-        <p>{product.detailedDescription}</p>
+        <div className="mt-4">
+          {selectedPortion === "detailedDescription" && (
+            <p>{product.detailedDescription}</p>
+          )}
+          {selectedPortion === "additionalInfo" && (
+            <div>
+              <p>Weight: {product.additional_information.weight}</p>
+              <p>
+                Organic: {product.additional_information.organic ? "Yes" : "No"}
+              </p>
+              <p>Nutrition: {product.additional_information.nutrition}</p>
+            </div>
+          )}
+          {selectedPortion === "customerFeedback" && (
+            <div>
+              <p>Average Rating: {product.rating.average}</p>
+              <p>Feedback Count: {product.rating.count}</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
