@@ -5,6 +5,7 @@ import SectionTitleBar from "./components/sectionTitleBar";
 import FeaturedProduct from "./sections/FeaturedProduct";
 import ShopByCategory from "./sections/shopByCategory";
 import WhyChooseUs from "./sections/whyChooseUs";
+import Statistics from "./sections/statistics";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <FeaturedProduct />
             <ShopByCategory />
             <WhyChooseUs />
+            <Statistics/>
         </div>
     );
 }
