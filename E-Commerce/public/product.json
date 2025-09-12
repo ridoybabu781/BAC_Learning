@@ -1,282 +1,278 @@
 [
   {
-    "id": "251594",
-    "name": "Chinese Cabbage",
-    "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.",
+    "id": "1001",
+    "name": "Big Potatoes",
+    "description": "Fresh farm-grown big potatoes, perfect for everyday cooking and baking.",
+    "detailedDescription": "These Big Potatoes are hand-picked from local farms, rich in carbohydrates and potassium. Ideal for boiling, mashing, baking, or frying. Store in a cool, dry place. Great for daily cooking and large family meals.",
     "price": {
-      "original_price": "$48.00",
-      "discounted_price": "$17.28",
-      "discount_percentage": 64
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
     },
     "availability": "In Stock",
-    "sku": "251594",
+    "sku": "1001",
     "brand": "Farmary",
     "category": "Vegetables",
-    "tags": ["Vegetables", "Healthy", "Chinese", "Cabbage", "Green Cabbage"],
-    "additional_information": {
-      "weight": "100g",
-      "organic": true,
-      "nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
-    },
-    "images": [
-      "https://example.com/images/product-image-1.jpg",
-      "https://example.com/images/product-image-2.jpg"
-    ],
-    "rating": {
-      "average": 4.6,
-      "count": 128
-    }
-  },
-  {
-    "id": "251595",
-    "name": "Fresh Apples",
-    "description": "Fresh, crunchy apples harvested from local orchards. Perfect for a healthy snack or adding to your favorite dishes.",
-    "price": {
-      "original_price": "$30.00",
-      "discounted_price": "$18.99",
-      "discount_percentage": 37
-    },
-    "availability": "In Stock",
-    "sku": "251595",
-    "brand": "OrchardFresh",
-    "category": "Fresh Food",
-    "tags": ["Fruit", "Fresh", "Healthy", "Apple"],
+    "tags": ["Vegetables", "Potatoes", "Fresh"],
     "additional_information": {
       "weight": "1kg",
       "organic": true,
-      "nutrition": "1 apple provides 15% of daily fiber."
+      "nutrition": "Rich in carbohydrates and potassium."
     },
-    "images": [
-      "https://example.com/images/fresh-apples-1.jpg",
-      "https://example.com/images/fresh-apples-2.jpg"
-    ],
-    "rating": {
-      "average": 4.8,
-      "count": 254
-    }
+    "images": ["/images/product/big-potatoes.jpg"],
+    "rating": { "average": 4.5, "count": 95 }
   },
   {
-    "id": "251596",
-    "name": "Salmon Fillet",
-    "description": "Freshly caught wild salmon fillets, perfect for grilling, baking, or pan-searing.",
+    "id": "1002",
+    "name": "Chinese Cabbage",
+    "description": "Crisp and fresh Chinese cabbage with rich nutrients.",
+    "detailedDescription": "Our Chinese Cabbage is fresh, crisp, and full of vitamins. Perfect for stir-fry, salads, soups, and side dishes. Naturally grown and rich in Vitamin C and fiber. Keep refrigerated for best freshness.",
     "price": {
-      "original_price": "$60.00",
-      "discounted_price": "$40.00",
-      "discount_percentage": 33
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
     },
     "availability": "In Stock",
-    "sku": "251596",
-    "brand": "OceanCatch",
-    "category": "Fish",
-    "tags": ["Fish", "Healthy", "Wild", "Salmon"],
+    "sku": "1002",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Cabbage", "Green", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "Rich source of Vitamin C and fiber."
+    },
+    "images": ["/images/product/chinese-cabbage.jpg"],
+    "rating": { "average": 4.6, "count": 128 }
+  },
+  {
+    "id": "1003",
+    "name": "Ladies Finger",
+    "description": "Fresh ladies finger, perfect for curries and stir fry.",
+    "detailedDescription": "Tender and fresh Ladies Finger (Okra) suitable for curries, soups, and stir-fries. Packed with fiber, Vitamin C, and folate. Ideal for healthy cooking and vegetarian dishes. Store in a cool, dry place.",
+    "price": {
+      "original_price": "$20.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 29
+    },
+    "availability": "In Stock",
+    "sku": "1003",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Okra", "Ladies Finger", "Green"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in dietary fiber and Vitamin C."
+    },
+    "images": ["/images/product/ladies-finger.jpg"],
+    "rating": { "average": 4.4, "count": 85 }
+  },
+  {
+    "id": "1004",
+    "name": "Eggplant",
+    "description": "Fresh eggplants rich in antioxidants and perfect for multiple cuisines.",
+    "detailedDescription": "Fresh Eggplants rich in antioxidants. Ideal for grilling, baking, roasting, or making classic dishes like moussaka or ratatouille. Supports heart health and adds rich flavor to meals. Store in a cool, dry place.",
+    "price": {
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
+    },
+    "availability": "In Stock",
+    "sku": "1004",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Eggplant", "Brinjal", "Healthy"],
     "additional_information": {
       "weight": "500g",
       "organic": false,
-      "nutrition": "Rich in omega-3 fatty acids and protein."
+      "nutrition": "Contains fiber, antioxidants, and Vitamin B1."
     },
-    "images": [
-      "https://example.com/images/salmon-fillet-1.jpg",
-      "https://example.com/images/salmon-fillet-2.jpg"
-    ],
-    "rating": {
-      "average": 4.7,
-      "count": 310
-    }
+    "images": ["/images/product/eggplant.jpg"],
+    "rating": { "average": 4.2, "count": 77 }
   },
   {
-    "id": "251597",
-    "name": "Beef Steak",
-    "description": "Premium cuts of beef steak, tender and juicy, perfect for grilling or pan-searing.",
+    "id": "1005",
+    "name": "Fresh Cauliflower",
+    "description": "Farm fresh cauliflower full of nutrients and flavor.",
+    "detailedDescription": "Crisp and fresh Cauliflower, high in Vitamin C and antioxidants. Perfect for roasting, steaming, or adding to soups and curries. Supports healthy digestion and immunity. Best kept refrigerated.",
     "price": {
-      "original_price": "$80.00",
-      "discounted_price": "$50.00",
-      "discount_percentage": 38
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
     },
     "availability": "In Stock",
-    "sku": "251597",
-    "brand": "PrimeBeef",
-    "category": "Meat",
-    "tags": ["Meat", "Beef", "Steak", "Premium"],
-    "additional_information": {
-      "weight": "400g",
-      "organic": false,
-      "nutrition": "High in protein and iron."
-    },
-    "images": [
-      "https://example.com/images/beef-steak-1.jpg",
-      "https://example.com/images/beef-steak-2.jpg"
-    ],
-    "rating": {
-      "average": 4.3,
-      "count": 189
-    }
-  },
-  {
-    "id": "251598",
-    "name": "Spring Water",
-    "description": "Pure spring water sourced from natural springs. Refreshing and hydrating, ideal for any occasion.",
-    "price": {
-      "original_price": "$5.00",
-      "discounted_price": "$3.50",
-      "discount_percentage": 30
-    },
-    "availability": "In Stock",
-    "sku": "251598",
-    "brand": "SpringFresh",
-    "category": "Drinks",
-    "tags": ["Water", "Hydration", "Natural", "Fresh"],
-    "additional_information": {
-      "weight": "1L",
-      "organic": true,
-      "nutrition": "Contains essential minerals for hydration."
-    },
-    "images": [
-      "https://example.com/images/spring-water-1.jpg",
-      "https://example.com/images/spring-water-2.jpg"
-    ],
-    "rating": {
-      "average": 4.5,
-      "count": 92
-    }
-  },
-  {
-    "id": "251594",
-    "name": "Chinese Cabbage",
-    "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.",
-    "price": {
-      "original_price": "$48.00",
-      "discounted_price": "$17.28",
-      "discount_percentage": 64
-    },
-    "availability": "In Stock",
-    "sku": "251594",
+    "sku": "1005",
     "brand": "Farmary",
     "category": "Vegetables",
-    "tags": ["Vegetables", "Healthy", "Chinese", "Cabbage", "Green Cabbage"],
+    "tags": ["Vegetables", "Cauliflower", "Fresh", "Healthy"],
     "additional_information": {
-      "weight": "100g",
+      "weight": "1 piece (~600g)",
       "organic": true,
-      "nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
+      "nutrition": "High in Vitamin C and antioxidants."
     },
-    "images": [
-      "https://example.com/images/product-image-1.jpg",
-      "https://example.com/images/product-image-2.jpg"
-    ],
-    "rating": {
-      "average": 4.6,
-      "count": 128
-    }
+    "images": ["/images/product/cauliflower.jpg"],
+    "rating": { "average": 4.3, "count": 90 }
   },
   {
-    "id": "251595",
-    "name": "Fresh Apples",
-    "description": "Fresh, crunchy apples harvested from local orchards. Perfect for a healthy snack or adding to your favorite dishes.",
+    "id": "1006",
+    "name": "Green Apple",
+    "description": "Crisp and tangy green apples, rich in fiber and Vitamin C.",
+    "detailedDescription": "Fresh and crisp Green Apples, perfect as a snack or in salads. Rich in dietary fiber and Vitamin C. Naturally sweet and tangy. Helps with digestion and immunity. Keep in a cool, dry place.",
     "price": {
-      "original_price": "$30.00",
-      "discounted_price": "$18.99",
-      "discount_percentage": 37
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
     },
     "availability": "In Stock",
-    "sku": "251595",
-    "brand": "OrchardFresh",
-    "category": "Fresh Food",
-    "tags": ["Fruit", "Fresh", "Healthy", "Apple"],
+    "sku": "1006",
+    "brand": "Farmary",
+    "category": "Fruits",
+    "tags": ["Fruits", "Apple", "Green Apple", "Healthy"],
     "additional_information": {
       "weight": "1kg",
       "organic": true,
-      "nutrition": "1 apple provides 15% of daily fiber."
+      "nutrition": "A good source of dietary fiber and Vitamin C."
     },
-    "images": [
-      "https://example.com/images/fresh-apples-1.jpg",
-      "https://example.com/images/fresh-apples-2.jpg"
-    ],
-    "rating": {
-      "average": 4.8,
-      "count": 254
-    }
+    "images": ["/images/product/green-apple.jpg"],
+    "rating": { "average": 4.7, "count": 112 }
   },
   {
-    "id": "251596",
-    "name": "Salmon Fillet",
-    "description": "Freshly caught wild salmon fillets, perfect for grilling, baking, or pan-searing.",
+    "id": "1007",
+    "name": "Green Capsicum",
+    "description": "Fresh green capsicum ideal for cooking and salads.",
+    "detailedDescription": "Fresh Green Capsicum, crunchy and full of flavor. Perfect for stir-fries, salads, or stuffing. Rich in Vitamin C and antioxidants. Adds vibrant color and nutrition to any dish.",
     "price": {
-      "original_price": "$60.00",
-      "discounted_price": "$40.00",
-      "discount_percentage": 33
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
     },
     "availability": "In Stock",
-    "sku": "251596",
-    "brand": "OceanCatch",
-    "category": "Fish",
-    "tags": ["Fish", "Healthy", "Wild", "Salmon"],
+    "sku": "1007",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Capsicum", "Green Pepper"],
     "additional_information": {
       "weight": "500g",
-      "organic": false,
-      "nutrition": "Rich in omega-3 fatty acids and protein."
-    },
-    "images": [
-      "https://example.com/images/salmon-fillet-1.jpg",
-      "https://example.com/images/salmon-fillet-2.jpg"
-    ],
-    "rating": {
-      "average": 4.7,
-      "count": 310
-    }
-  },
-  {
-    "id": "251597",
-    "name": "Beef Steak",
-    "description": "Premium cuts of beef steak, tender and juicy, perfect for grilling or pan-searing.",
-    "price": {
-      "original_price": "$80.00",
-      "discounted_price": "$50.00",
-      "discount_percentage": 38
-    },
-    "availability": "In Stock",
-    "sku": "251597",
-    "brand": "PrimeBeef",
-    "category": "Meat",
-    "tags": ["Meat", "Beef", "Steak", "Premium"],
-    "additional_information": {
-      "weight": "400g",
-      "organic": false,
-      "nutrition": "High in protein and iron."
-    },
-    "images": [
-      "https://example.com/images/beef-steak-1.jpg",
-      "https://example.com/images/beef-steak-2.jpg"
-    ],
-    "rating": {
-      "average": 4.3,
-      "count": 189
-    }
-  },
-  {
-    "id": "251598",
-    "name": "Spring Water",
-    "description": "Pure spring water sourced from natural springs. Refreshing and hydrating, ideal for any occasion.",
-    "price": {
-      "original_price": "$5.00",
-      "discounted_price": "$3.50",
-      "discount_percentage": 30
-    },
-    "availability": "In Stock",
-    "sku": "251598",
-    "brand": "SpringFresh",
-    "category": "Drinks",
-    "tags": ["Water", "Hydration", "Natural", "Fresh"],
-    "additional_information": {
-      "weight": "1L",
       "organic": true,
-      "nutrition": "Contains essential minerals for hydration."
+      "nutrition": "Rich in Vitamin C and antioxidants."
     },
-    "images": [
-      "https://example.com/images/spring-water-1.jpg",
-      "https://example.com/images/spring-water-2.jpg"
-    ],
-    "rating": {
-      "average": 4.5,
-      "count": 92
-    }
+    "images": ["/images/product/green-capsicum.jpg"],
+    "rating": { "average": 4.4, "count": 89 }
+  },
+  {
+    "id": "1008",
+    "name": "Green Chili",
+    "description": "Hot and spicy green chilies for flavoring dishes.",
+    "detailedDescription": "Fresh Green Chilies with a spicy kick, perfect for curries, sauces, and marinades. High in Vitamin C and capsaicin. Adds heat and flavor naturally to dishes. Store in a cool, dry place.",
+    "price": {
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
+    },
+    "availability": "In Stock",
+    "sku": "1008",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Chili", "Spicy", "Green"],
+    "additional_information": {
+      "weight": "200g",
+      "organic": true,
+      "nutrition": "High in Vitamin C and capsaicin."
+    },
+    "images": ["/images/product/green-chili.jpg"],
+    "rating": { "average": 4.5, "count": 76 }
+  },
+  {
+    "id": "1009",
+    "name": "Green Cucumber",
+    "description": "Fresh cucumbers with high water content and cooling effect.",
+    "detailedDescription": "Crisp Green Cucumbers, hydrating and refreshing. Ideal for salads, sandwiches, and detox waters. Rich in Vitamin K and antioxidants. Store in the fridge for maximum freshness.",
+    "price": {
+      "original_price": "$20.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 50
+    },
+    "availability": "In Stock",
+    "sku": "1009",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Cucumber", "Fresh", "Green"],
+    "additional_information": {
+      "weight": "1kg",
+      "organic": true,
+      "nutrition": "Hydrating vegetable, rich in Vitamin K."
+    },
+    "images": ["/images/product/green-cucumber.jpg"],
+    "rating": { "average": 4.6, "count": 102 }
+  },
+  {
+    "id": "1010",
+    "name": "Green Lettuce",
+    "description": "Fresh crispy lettuce leaves perfect for salads and wraps.",
+    "detailedDescription": "Fresh Green Lettuce, crisp and mild. Ideal for salads, sandwiches, and wraps. Low in calories and rich in Vitamin A. Keep refrigerated and rinse before use for maximum freshness.",
+    "price": {
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
+    },
+    "availability": "In Stock",
+    "sku": "1010",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Lettuce", "Green", "Fresh"],
+    "additional_information": {
+      "weight": "250g",
+      "organic": true,
+      "nutrition": "Low in calories and rich in Vitamin A."
+    },
+    "images": ["/images/product/green-lettuce.jpg"],
+    "rating": { "average": 4.5, "count": 83 }
+  },
+  {
+    "id": "1011",
+    "name": "Ladies Finger",
+    "description": "Tender and fresh okra pods, great for curries and stir-fry.",
+    "detailedDescription": "Fresh and tender Ladies Finger (Okra) pods. Perfect for curries, stews, and stir-fry dishes. High in fiber, Vitamin C, and folate. Supports digestive health and immunity. Store in a cool place.",
+    "price": {
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
+    },
+    "availability": "In Stock",
+    "sku": "1011",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Okra", "Ladies Finger", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "Good source of fiber, Vitamin C, and folate."
+    },
+    "images": ["/images/product/ladies-finger.jpg"],
+    "rating": { "average": 4.4, "count": 70 }
+  },
+  {
+    "id": "1012",
+    "name": "Red Capsicum",
+    "description": "Bright red capsicum full of flavor and nutrition.",
+    "detailedDescription": "Fresh Red Capsicum, sweet and crunchy. Ideal for stir-fries, salads, and roasting. Rich in Vitamin C, beta-carotene, and antioxidants. Adds color and nutrition to every meal.",
+    "price": {
+      "original_price": "$14.99",
+      "discounted_price": "$14.99",
+      "discount_percentage": 0
+    },
+    "availability": "In Stock",
+    "sku": "1012",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Capsicum", "Red Pepper"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in Vitamin C and beta-carotene."
+    },
+    "images": ["/images/product/red-capsicum.jpg"],
+    "rating": { "average": 4.6, "count": 97 }
   }
 ]

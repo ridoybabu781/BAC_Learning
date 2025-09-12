@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import filterIcon from "../../../assets/img/features/Filter24px.png";
+import filterIcon from "/images/features/Filter24px.png";
 
 import { Star } from "@phosphor-icons/react";
-import vegitableSalad from "../../../assets/img/vegitableSalad.jpg";
+import vegitableSalad from "/images/vegitableSalad.jpg";
 
 const tags = [
   "Healthy",

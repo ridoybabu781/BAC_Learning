@@ -1,6 +1,8 @@
 import { ShoppingBagIcon, StarIcon } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
 
 let ProductCard = ({ product }) => {
+  const navigate = useNavigate();
   let {
     name,
     price: { original_price },
@@ -9,7 +11,10 @@ let ProductCard = ({ product }) => {
     rating = 3,
   } = product;
   return (
-    <div className=" border border-gray-200 overflow-hidden rounded-2xl h-full hover:ring hover:ring-primary">
+    <div
+      onClick={() => navigate(`/product/${product.id}`)}
+      className=" border border-gray-200 overflow-hidden rounded-2xl h-full hover:ring hover:ring-primary"
+    >
       <div className="aspect-[1/1]">
         <img
           src={image}

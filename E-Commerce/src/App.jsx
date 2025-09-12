@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import TopBar from "./components/layout/TopBar";
 import { Routes, Route } from "react-router-dom";
 import ProductPage from "./pages/product/ProductPage";
+import SingleProduct from "./pages/singleProduct/SingleProduct";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/product"} element={<ProductPage />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
       </Routes>
     </div>
   );
