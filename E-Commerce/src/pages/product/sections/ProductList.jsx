@@ -1,6 +1,6 @@
 import React from "react";
 import products from "../../../public/product.json";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../../../components/ProductCard.jsx";
 
 import { useState } from "react";
 
@@ -14,6 +14,7 @@ export default function ProductList() {
   const endIndex = startIndex + itemsPerPage;
 
   const currentProducts = products.slice(startIndex, endIndex);
+  console.log(currentProducts);
 
   return (
     <div>

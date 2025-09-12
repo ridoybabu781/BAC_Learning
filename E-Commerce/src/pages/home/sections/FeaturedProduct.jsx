@@ -6,6 +6,10 @@ import cabbage from "../../../assets/img/china-cabbage.jpg";
 import capsicum from "../../../assets/img/capsicum.jpg";
 import ladisFinger from "../../../assets/img/ladis-finger.jpg";
 
+import ProductCard from "../../../components/ProductCard";
+
+import Products from '../../../public/product.json'
+
 let featuredProdct = [
     {
         id: 1,
@@ -49,59 +53,7 @@ let featuredProdct = [
     },
 ];
 
-let ProductCard = ({ data }) => {
-    let {
-        id,
-        haveSale,
-        discount,
-        title,
-        fullPrice,
-        discountedPrice,
-        image,
-        rating,
-    } = data;
-    return (
-        <div className=' border border-gray-200 overflow-hidden rounded-2xl h-full hover:ring hover:ring-primary'>
-            <div className='aspect-[1/1]'>
-                <img
-                    src={image}
-                    alt=''
-                    className='w-full h-full object-center object-cover'
-                />
-            </div>
-            <div className='flex items-center justify-between p-6'>
-                <div>
-                    <p className='text-sm text-gray-600'> {title}</p>
-                    <p className='text-md'>
-                        {discountedPrice}
-                        <span className='line-through text-gray-400'>
-                            {fullPrice}
-                        </span>
-                    </p>
-                    <div className='flex mt-1.5'>
-                        {new Array(5).fill("").map((value, index) => {
-                            return (
-                                <StarIcon
-                                    color='gold'
-                                    weight={
-                                         rating > index ? 'fill' : 'regular'
-                                    }
-                                    size={14}
-                                    key={index}
-                                />
-                            );
-                        })}
-                    </div>
-                </div>
-                <div>
-                    <div className='bg-gray-100 p-4 rounded-full'>
-                        <ShoppingBagIcon />
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
+featuredProdct = Products.slice(0,4)
 
 export default function FeaturedProduct() {
     return (
@@ -109,7 +61,7 @@ export default function FeaturedProduct() {
             <SectionTitleBar title={"Featured Product"} nextPageLink={""} />
             <div className='grid grid-cols-4 gap-6'>
                 {featuredProdct.map((item, index) => {
-                    return <ProductCard data={item} key={index} />;
+                    return <ProductCard product={item} key={index} />;
                 })}
             </div>
         </section>
