@@ -4,7 +4,6 @@ import OrderHistory from "./sections/OrderHistory";
 import Wishlist from "./sections/Wishlist";
 import ShoppingCart from "./sections/ShoppingCart";
 import Settings from "./sections/Settings";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Profile() {
   const [selectedSection, setSelectedSection] = useState("dashboard");
@@ -22,20 +21,38 @@ export default function Profile() {
       case "settings":
         return <Settings />;
       default:
-        return <div>{<Dashboard />}</div>;
+        return <Dashboard />;
     }
   };
 
-  const btns = [
-    {
-      text: "Dashboard",
-      onClick: () => setSelectedSection("dashboard"),
-    },
+  const sidebarItems = [
+    { text: "Dashboard", key: "dashboard" },
+    { text: "Order History", key: "orderHistory" },
+    { text: "Wishlist", key: "wishlist" },
+    { text: "Shopping Cart", key: "shoppingCart" },
+    { text: "Settings", key: "settings" },
   ];
+
   return (
-    <div className="flex flex-col md:flex-col">
-      <div className="w-1/4"></div>
-      <div className="w-3/4">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
+      <div className="w-full md:w-1/4 bg-white shadow-md p-6 flex flex-col space-y-4">
+        {sidebarItems.map((item) => (
+          <button
+            key={item.key}
+            onClick={() => setSelectedSection(item.key)}
+            className={`text-left px-4 py-2 rounded-lg font-medium transition-colors
+              ${
+                selectedSection === item.key
+                  ? "bg-green-500 text-white"
+                  : "hover:bg-green-100 text-gray-700"
+              }`}
+          >
+            {item.text}
+          </button>
+        ))}
+      </div>
+
+      <div className="w-full md:w-3/4 p-6">
         <Section />
       </div>
     </div>
