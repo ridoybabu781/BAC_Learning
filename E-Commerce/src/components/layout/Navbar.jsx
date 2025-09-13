@@ -41,9 +41,13 @@ export default function Navbar() {
             }
           >
             <div className="space-y-12 p-12">
-              <div className="text-3xl flex items-center gap-2 justify-between">
+              <div className="text-3xl flex items-center gap-2 justify-between ">
                 <Logo />
-                <XIcon size={32} onClick={() => setNavBarOpen(false)} />
+                <XIcon
+                  size={32}
+                  onClick={() => setNavBarOpen(false)}
+                  className="absolute top-4 right-0 cursor-pointer"
+                />
               </div>
 
               <div className="flex flex-col lg:flex-row gap-7">
