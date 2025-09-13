@@ -11,6 +11,7 @@ import NotFound from "./pages/notFound/NotFound";
 import CartPage from "./pages/cart/CartPage";
 import WishList from "./pages/wishlist/WishList";
 import Footer from "./components/layout/footer";
+import Profile from "./pages/profile/Profile";
 
 export default function App() {
   return (
@@ -25,7 +26,7 @@ export default function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/wishlist" element={<WishList />} />
-
+        <Route path="/profile" element={<Profile />} />
         {/* Not Found page here */}
         <Route path="*" element={<NotFound />} />
       </Routes>
