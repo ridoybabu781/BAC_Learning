@@ -29,21 +29,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-1/2">
-        <h4 className="text-green-500 font-medium">Welcome to shopery</h4>
-        <h1 className="text-7xl font-semibold my-7">
-          Fresh & Healthy Organic Food
-        </h1>
-        <div className="space-y-2">
-          <h3 className="text-3xl font-semibold">
-            Sale up to <span className="text-orange-400">30% OFF</span>
-          </h3>
-          <p>Free shipping on all your order. we deliver, you enjoy</p>
-        </div>
-        <button className="bg-green-500 text-white px-6 py-3 rounded-full mt-4 hover:bg-green-600 flex items-center gap-2">
-          Shop Now <FontAwesomeIcon icon={faArrowRight} />
-        </button>
-      </div>
     </>
   );
 }
