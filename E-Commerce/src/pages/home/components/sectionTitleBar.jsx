@@ -2,7 +2,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 let SectionTitleBar = ({ title, nextPageLink }) => {
     return (
-        <div className='flex  items-center justify-between container m-auto mb-10 mt-20 w-full '>
+        <div className='flex  items-center justify-between container m-auto mb-10 mt-20 w-full px-12 '>
             <h1 className='section-heading'>{title}</h1>
             <a
                 href={nextPageLink}

@@ -5,9 +5,9 @@ import React from "react";
 
 export default function TopBar() {
     return (
-        <div className='bg-green-100'>
-            <div className='flex justify-between max-w-7xl m-auto py-3'>
-                <p className='flex gap-2 text-hard-primary items-center justify-center'>
+        <div className='bg-green-100 hidden sm:block'>
+            <div className='flex justify-between container m-auto py-3'>
+                <p className='flex gap-2 text-hard-primary items-center justify-center '>
                     <FontAwesomeIcon icon={faLocationDot} />
                     Store Location: Lincoln- 344, Illinois, Chicago, USA
                 </p>

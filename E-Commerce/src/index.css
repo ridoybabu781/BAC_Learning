@@ -8,9 +8,7 @@
     --color-primary: #00b207 ; 
     --color-hard-primary: #2c742f ; 
     --color-warning: #ff8a00; 
-    --color-danger: #ea4b48; 
-
-    --text-section-heading: 40px;
+    --color-danger: #ea4b48;  
 }
 
 @layer components {
@@ -19,6 +17,6 @@
     }
     
     .section-heading {
-        @apply text-section-heading font-semibold; 
+        @apply text-2xl font-semibold; 
     } 
 }
