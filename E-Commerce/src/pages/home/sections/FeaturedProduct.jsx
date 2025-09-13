@@ -5,7 +5,6 @@ import ProductCard from "../../../components/ProductCard";
 import { useEffect, useState } from "react";
 
 export default function FeaturedProduct() {
-<<<<<<< HEAD
   const [Products, setProducts] = useState();
 
   useEffect(() => {
@@ -26,16 +25,4 @@ export default function FeaturedProduct() {
       </div>
     </section>
   );
-=======
-    return (
-        <section className='container m-auto mb-12'>
-            <SectionTitleBar title={"Featured Product"} nextPageLink={""} />
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-12'>
-                {featuredProdct.map((item, index) => {
-                    return <ProductCard product={item} key={index} />;
-                })}
-            </div>
-        </section>
-    );
->>>>>>> 90a121d (Made home page mobile responsive)
 }

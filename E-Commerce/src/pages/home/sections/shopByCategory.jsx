@@ -9,11 +9,7 @@ import drinks from "/images/category-icons/soft-drink 1.png";
 import snacks from "/images/category-icons/snacks 1.png";
 import { useRef } from "react";
 
-<<<<<<< HEAD
 import sectionBg from "/images/BG2.png";
-=======
-import sectionBg from "../../../assets/img/BG2.png";
->>>>>>> 90a121d (Made home page mobile responsive)
 
 let CategoryCard = ({ data }) => {
   let { image, title, productCount } = data;
@@ -59,7 +55,6 @@ let categories = [
   },
 ];
 let ShopByCategory = () => {
-<<<<<<< HEAD
   let scrollContainerRef = useRef(null);
   let scrollFactor = 200;
 
@@ -78,88 +73,47 @@ let ShopByCategory = () => {
     });
   };
   return (
-    <div
-      className={" m-auto py-10 bg-cover mb-12"}
-      style={{ backgroundImage: `url(${sectionBg})` }}
-    >
-      <SectionTitleBar title={"Shop by Top Categories"} nextPageLink={"/"} />
-      <div className="flex items-center justify-between gap-8">
-        <button
-          onClick={() => scrollLeft()}
-          className="p-4 border border-gray-300 rounded-full text-gray-600 "
-        >
-          <ArrowLeftIcon />
-        </button>
-        <div
-          className="flex flex-1 gap-6 overflow-auto"
-          ref={scrollContainerRef}
-        >
-          {categories.map((items, index) => {
-            return <CategoryCard data={items} key={index} />;
-          })}
-=======
-    let scrollContainerRef = useRef(null);
-    let scrollFactor = 200;
-
-    let scrollLeft = () => {
-        let scrollContainer = scrollContainerRef.current;
-        scrollContainer.scrollBy({
-            left: -scrollFactor,
-            behavior: "smooth",
-        });
-    };
-    let scrollRight = () => {
-        let scrollContainer = scrollContainerRef.current;
-        scrollContainer.scrollBy({
-            left: scrollFactor,
-            behavior: "smooth",
-        });
-    };
-    return (
-        <div
-            className={" m-auto py-10 bg-cover mb-12"}
-            style={{ backgroundImage: `url(${sectionBg})` }}
-        >
-            <SectionTitleBar
-                title={"Shop by Top Categories"}
-                nextPageLink={"/"}
-            />
-            <div className="container  m-auto">
-                <div className='flex items-center justify-between gap-8'>
-                    <button
-                        onClick={() => scrollLeft()}
-                        className='p-4 border border-gray-300 rounded-full text-gray-600 '
-                    >
-                        <ArrowLeftIcon />
-                    </button>
-                    <div
-                        className='flex flex-1 gap-6 overflow-auto'
-                        ref={scrollContainerRef}
-                    >
-                        {categories.map((items, index) => {
-                            return <CategoryCard data={items} key={index} />;
-                        })}
-                    </div>
-                    <button
-                        onClick={() => scrollRight()}
-                        className='p-4 border border-gray-300 rounded-full text-gray-600 '
-                    >
-                        {" "}
-                        <ArrowRightIcon />
-                    </button>
-                </div>
+    <>
+      <div
+        className={" m-auto py-10 bg-cover mb-12"}
+        style={{ backgroundImage: `url(${sectionBg})` }}
+      >
+        <SectionTitleBar title={"Shop by Top Categories"} nextPageLink={"/"} />
+        <div className="container  m-auto">
+          <div className="flex items-center justify-between gap-8">
+            <button
+              onClick={() => scrollLeft()}
+              className="p-4 border border-gray-300 rounded-full text-gray-600 "
+            >
+              <ArrowLeftIcon />
+            </button>
+            <div
+              className="flex flex-1 gap-6 overflow-auto"
+              ref={scrollContainerRef}
+            >
+              {categories.map((items, index) => {
+                return <CategoryCard data={items} key={index} />;
+              })}
             </div>
->>>>>>> 90a121d (Made home page mobile responsive)
+            <button
+              onClick={() => scrollRight()}
+              className="p-4 border border-gray-300 rounded-full text-gray-600 "
+            >
+              {" "}
+              <ArrowRightIcon />
+            </button>
+          </div>
         </div>
-        <button
-          onClick={() => scrollRight()}
-          className="p-4 border border-gray-300 rounded-full text-gray-600 "
-        >
-          {" "}
-          <ArrowRightIcon />
-        </button>
       </div>
-    </div>
+      {/* If you want the extra button, keep it here, otherwise remove it */}
+      {/* <button
+        onClick={() => scrollRight()}
+        className="p-4 border border-gray-300 rounded-full text-gray-600 "
+      >
+        {" "}
+        <ArrowRightIcon />
+      </button> */}
+    </>
   );
 };
 
