@@ -45,7 +45,7 @@ let LatestBlogs = () => {
         getBlogs();
     }, []);
     return (
-        <div className='bg-[url(/images/blogs-bg.png)] bg-cover bg-no-repeat'>
+        <div className='bg-[url(/images/blogs-bg.png)] bg-cover bg-no-repeat py-12 border-b border-gray-200 pb-24'>
             <div className='container m-auto py-12 p-8 md:p-0'>
                 <h1 className='text-3xl font-semibold text-center my-8'>
                     Latest News
