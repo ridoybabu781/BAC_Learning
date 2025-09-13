@@ -10,6 +10,7 @@ import SignUp from "./pages/auth/SignUp";
 import NotFound from "./pages/notFound/NotFound";
 import CartPage from "./pages/cart/CartPage";
 import WishList from "./pages/wishlist/WishList";
+import Footer from "./components/layout/footer";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         {/* Not Found page here */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
