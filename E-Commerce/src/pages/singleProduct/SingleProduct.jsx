@@ -215,11 +215,9 @@ export default function SingleProduct() {
         <div className="text-2xl font-medium py-4 text-center">
           Related Products
         </div>
-        <div className="flex gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {productss?.map((product) => (
-            <div className="w-full lg:2/4 md:w-1/4">
-              <ProductCard product={product} />
-            </div>
+            <ProductCard product={product} />
           ))}
         </div>
       </div>
