@@ -6,8 +6,9 @@ import FeaturedProduct from "./sections/FeaturedProduct";
 import ShopByCategory from "./sections/shopByCategory";
 import WhyChooseUs from "./sections/whyChooseUs";
 import Statistics from "./sections/statistics";
-import Footer from "./sections/footer";
+import Footer from "../../components/layout/footer";
 import Contact from "./sections/contactSection";
+import Sponsor from "./sections/sponsor";
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
             <ShopByCategory />
             <WhyChooseUs />
             <Statistics/>
+            <Sponsor/>
             <Contact/>
             <Footer/>
         </div>
