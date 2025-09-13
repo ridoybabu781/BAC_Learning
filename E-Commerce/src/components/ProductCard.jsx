@@ -13,7 +13,7 @@ let ProductCard = ({ product }) => {
   return (
     <div
       onClick={() => navigate(`/product/${product.id}`)}
-      className=" border border-gray-200 overflow-hidden rounded-2xl h-full hover:ring hover:ring-primary"
+      className=" border border-gray-200 overflow-hidden rounded-2xl shrink-0 h-full hover:ring hover:ring-primary"
     >
       <div className="aspect-[1/1]">
         <img

@@ -10,6 +10,7 @@ import Footer from "../../components/layout/footer";
 import Contact from "./sections/contactSection";
 import Sponsor from "./sections/sponsor";
 import LatestBlogs from "./sections/Latest-blogs";
+import BestSeller from "./sections/Best-seller";
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
             <ShopByCategory />
             <WhyChooseUs />
             <Statistics/>
+            <BestSeller/>
             <LatestBlogs/>
             <Sponsor/>
             <Contact/>
