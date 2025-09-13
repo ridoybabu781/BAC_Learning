@@ -5,6 +5,9 @@ import TopBar from "./components/layout/TopBar";
 import { Routes, Route } from "react-router-dom";
 import ProductPage from "./pages/product/ProductPage";
 import SingleProduct from "./pages/singleProduct/SingleProduct";
+import Login from "./pages/auth/SignIn";
+import SignUp from "./pages/auth/SignUp";
+import NotFound from "./pages/notFound/NotFound";
 
 export default function App() {
   return (
@@ -15,6 +18,9 @@ export default function App() {
         <Route path={"/"} element={<Home />} />
         <Route path={"/product"} element={<ProductPage />} />
         <Route path="/product/:id" element={<SingleProduct />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
