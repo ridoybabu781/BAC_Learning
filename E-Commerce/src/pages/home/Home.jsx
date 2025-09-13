@@ -13,19 +13,18 @@ import LatestBlogs from "./sections/Latest-blogs";
 import BestSeller from "./sections/Best-seller";
 
 export default function Home() {
-    return (
-        <div className="bg-white">
-            <Hero />
-            <FeaturesSection />
-            <FeaturedProduct />
-            <ShopByCategory />
-            <WhyChooseUs />
-            <Statistics/>
-            <BestSeller/>
-            <LatestBlogs/>
-            <Sponsor/>
-            <Contact/>
-            <Footer/>
-        </div>
-    );
+  return (
+    <div className="bg-white">
+      <Hero />
+      <FeaturesSection />
+      <FeaturedProduct />
+      <ShopByCategory />
+      <WhyChooseUs />
+      <Statistics />
+      <BestSeller />
+      <LatestBlogs />
+      <Sponsor />
+      <Contact />
+    </div>
+  );
 }
