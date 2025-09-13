@@ -6,16 +6,20 @@ import FeaturedProduct from "./sections/FeaturedProduct";
 import ShopByCategory from "./sections/shopByCategory";
 import WhyChooseUs from "./sections/whyChooseUs";
 import Statistics from "./sections/statistics";
+import Footer from "./sections/footer";
+import Contact from "./sections/contactSection";
 
 export default function Home() {
-  return (
-    <div className="bg-white">
-      <Hero />
-      <FeaturesSection />
-      <FeaturedProduct />
-      <ShopByCategory />
-      <WhyChooseUs />
-      <Statistics />
-    </div>
-  );
+    return (
+        <div className="bg-white">
+            <Hero />
+            <FeaturesSection />
+            <FeaturedProduct />
+            <ShopByCategory />
+            <WhyChooseUs />
+            <Statistics/>
+            <Contact/>
+            <Footer/>
+        </div>
+    );
 }
