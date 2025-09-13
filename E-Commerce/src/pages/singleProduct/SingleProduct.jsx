@@ -1,4 +1,4 @@
-import { StarIcon } from "@phosphor-icons/react";
+import { CaretRightIcon, HouseIcon, StarIcon } from "@phosphor-icons/react";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../../components/ProductCard";
@@ -38,11 +38,18 @@ export default function SingleProduct() {
     };
     const handleAddWishlist = async () => {
         addToWishlist(productData);
-    };
-
+    }; 
     return (
-        <div className='flex flex-col items-center'>
-            <div className='container m-auto mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10'>
+        <div className=' '>
+            <div>
+                <div className='bg-[url(/images/shopHero.jpg)]'>
+                    <div className=' backdrop-brightness-50 text-white py-12 px-12 flex  items-center gap-4 text-xl'>
+                        <HouseIcon /> Home <CaretRightIcon /> Product
+                        <CaretRightIcon /> {product.name}
+                    </div>
+                </div>
+            </div>
+            <div className='container m-auto mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10 my-12'>
                 <div className='flex gap-4'>
                     <div className='flex flex-col gap-3 w-20'>
                         {product?.images?.map((image, idx) => (
