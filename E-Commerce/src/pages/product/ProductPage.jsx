@@ -8,8 +8,10 @@ export default function ProductPage() {
         <div className=''>
             <div>
                 <div className='bg-[url(/images/shopHero.jpg)]'>
-                    <div className=' backdrop-brightness-50 text-white py-12 px-12 flex  items-center gap-4 text-xl'>
-                        <HouseIcon /> Home <CaretRightIcon /> Product
+                    <div className=' backdrop-brightness-50 text-white w-full'>
+                        <div className=" py-12 px-12 flex  items-center gap-4 text-xl container m-auto '  ">
+                            <HouseIcon /> Home <CaretRightIcon /> Product
+                        </div>
                     </div>
                 </div>
             </div>

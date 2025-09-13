@@ -15,8 +15,10 @@ export default function SignUp() {
     return (
         <div>
             <div className='bg-[url(/images/shopHero.jpg)]'>
-                <div className=' backdrop-brightness-50 text-white py-12 px-12 flex  items-center gap-4 text-xl'>
-                    <HouseIcon /> Account <CaretRightIcon /> Signup
+                <div className=' backdrop-brightness-50 text-white w-full'>
+                    <div className=" py-12 px-12 flex  items-center gap-4 text-xl container m-auto '  ">
+                        <HouseIcon /> Account <CaretRightIcon /> Signup
+                    </div>
                 </div>
             </div>
             <div className='flex justify-center items-center min-h-[80vh] bg-gray-50'>
