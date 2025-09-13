@@ -5,15 +5,15 @@ import ProductCard from "../../../components/ProductCard";
 import { useEffect, useState } from "react";
 
 export default function FeaturedProduct() {
-  const [Products, setProducts] = useState();
+    const [Products, setProducts] = useState();
 
-  useEffect(() => {
-    fetch("/product.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+    useEffect(() => {
+        fetch("/product.json")
+            .then((res) => res.json())
+            .then((data) => setProducts(data));
+    }, []);
 
-  const featuredProdct = Products?.splice(0, 4);
+    const featuredProdct = Products?.splice(0, 4);
 
   return (
     <section className="container m-auto mb-12">

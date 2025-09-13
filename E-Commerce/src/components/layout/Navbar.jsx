@@ -1,3 +1,4 @@
+import { Logo } from '../logo';
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
@@ -33,20 +34,20 @@ export default function Navbar() {
             <ListIcon size={32} />
           </div>
 
-          <div
-            className={
-              "fixed top-0 left-0 bg-white  h-full space-y-12 flex flex-col  justify-between lg:hidden overflow-hidden transition-all " +
-              (navBarOpen ? " w-2/3 " : " w-0 ")
-            }
-          >
-            <div className="space-y-12 p-12">
-              <div className="text-3xl flex items-center gap-2 justify-between">
-                <div>
-                  <FontAwesomeIcon icon={faLeaf} className="text-green-500" />
-                  Ecobazar
-                </div>
-                <XIcon size={32} onClick={() => setNavBarOpen(false)} />
-              </div>
+                    <div
+                        className={
+                            "fixed top-0 left-0 bg-white  h-full space-y-12 flex flex-col  justify-between lg:hidden overflow-hidden transition-all " +
+                            (navBarOpen ? " w-2/3 " : " w-0 ")
+                        }
+                    >
+                        <div className='space-y-12 p-12'>
+                            <div className='text-3xl flex items-center gap-2 justify-between'>
+                                <Logo/>
+                                <XIcon
+                                    size={32}
+                                    onClick={() => setNavBarOpen(false)}
+                                />
+                            </div>
 
               <div className="flex flex-col lg:flex-row gap-7">
                 {navData.map((item, index) => {
@@ -90,24 +91,23 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="text-3xl flex items-center gap-2">
-            <FontAwesomeIcon icon={faLeaf} className="text-green-500" />
-            Ecobazar
-          </div>
-
-          <div className="  gap-7 hidden lg:flex">
-            {navData.map((item, index) => {
-              return (
-                <div
-                  className="space-x-2 text-gray-600 flex items-center gap-2"
-                  key={index}
-                >
-                  <Link to={item.link}> {item.name}</Link>
-                  {item.downArray ? <CaretDownIcon size={16} /> : null}
-                </div>
-              );
-            })}
-          </div>
+                    <Logo/>
+                    
+                    <div className='  gap-7 hidden lg:flex'>
+                        {navData.map((item, index) => {
+                            return (
+                                <div
+                                    className='space-x-2 text-gray-600 flex items-center gap-2'
+                                    key={index}
+                                >
+                                    <a href={item.link}> {item.name}</a>
+                                    {item.downArray ? (
+                                        <CaretDownIcon size={16} />
+                                    ) : null}
+                                </div>
+                            );
+                        })}
+                    </div>
 
           <div className="flex items-center gap-10">
             <div className="gap-5 hidden xl:block">
