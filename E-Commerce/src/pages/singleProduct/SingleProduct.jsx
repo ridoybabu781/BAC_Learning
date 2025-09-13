@@ -217,7 +217,7 @@ export default function SingleProduct() {
         </div>
         <div className="flex gap-4">
           {productss?.map((product) => (
-            <div className="w-full md:w-1/4">
+            <div className="w-full lg:2/4 md:w-1/4">
               <ProductCard product={product} />
             </div>
           ))}
