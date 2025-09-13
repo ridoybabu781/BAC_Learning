@@ -8,6 +8,8 @@ import SingleProduct from "./pages/singleProduct/SingleProduct";
 import Login from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import NotFound from "./pages/notFound/NotFound";
+import CartPage from "./pages/cart/CartPage";
+import WishList from "./pages/wishlist/WishList";
 
 export default function App() {
   return (
@@ -20,6 +22,10 @@ export default function App() {
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/wishlist" element={<WishList />} />
+
+        {/* Not Found page here */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

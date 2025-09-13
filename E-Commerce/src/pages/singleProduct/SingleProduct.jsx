@@ -11,7 +11,7 @@ export default function SingleProduct() {
   const [quantity, setQuantity] = useState(1);
   const [selectedPortion, setSelectedPortion] = useState("detailedDescription");
 
-  const { addToCart } = productStore();
+  const { addToCart, addToWishlist } = productStore();
 
   useEffect(() => {
     fetch("/product.json")
@@ -31,8 +31,11 @@ export default function SingleProduct() {
     product,
     quantity,
   };
-  const handleAdd = async () => {
+  const handleAddCart = async () => {
     addToCart(productData);
+  };
+  const handleAddWishlist = async () => {
+    addToWishlist(productData);
   };
 
   return (
@@ -120,24 +123,35 @@ export default function SingleProduct() {
             ))}
           </p>
 
-          <div className="flex items-center gap-3 mt-4">
-            <input
-              type="number"
-              min="1"
-              value={quantity}
-              onChange={(e) => {
-                setQuantity(e.target.value);
-              }}
-              defaultValue="1"
-              className="w-16 border p-2 rounded"
-            />
-            <button
-              onClick={handleAdd}
-              className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
-            >
-              Add to Cart
-            </button>
-          </div>
+          {product.availability === "In Stock" ? (
+            <div className="flex items-center gap-3 mt-4">
+              <input
+                type="number"
+                min="1"
+                value={quantity}
+                onChange={(e) => {
+                  setQuantity(e.target.value);
+                }}
+                defaultValue="1"
+                className="w-16 border p-2 rounded"
+              />
+              <button
+                onClick={handleAddCart}
+                className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
+              >
+                Add to Cart
+              </button>
+            </div>
+          ) : (
+            <div>
+              <button
+                onClick={handleAddWishlist}
+                className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
+              >
+                Add to WishList
+              </button>
+            </div>
+          )}
         </div>
         <div>
           <div className="flex gap-4 mb-2">

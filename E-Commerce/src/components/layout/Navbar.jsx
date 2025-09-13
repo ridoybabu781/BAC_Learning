@@ -29,13 +29,15 @@ export default function Navbar() {
           <div className="flex gap-7">
             {navData.map((item, index) => {
               return (
-                <div
-                  className="space-x-2 text-gray-600 flex items-center gap-2"
-                  key={index}
-                >
-                  <Link to={item.link}> {item.name}</Link>
-                  {item.downArray ? <CaretDownIcon size={16} /> : null}
-                </div>
+                <Link to={item.link}>
+                  <div
+                    className="space-x-2 text-gray-600 flex items-center gap-2"
+                    key={index}
+                  >
+                    <li className="list-none"> {item.name}</li>
+                    {item.downArray ? <CaretDownIcon size={16} /> : null}
+                  </div>
+                </Link>
               );
             })}
           </div>
@@ -55,13 +57,19 @@ export default function Navbar() {
                 <MagnifyingGlassIcon size={36} />
               </span>
               <span>
-                <HeartIcon size={36} />
+                <Link to={"/wishlist"}>
+                  <HeartIcon size={36} />
+                </Link>
               </span>
               <span>
-                <ShoppingCartIcon size={36} />
+                <Link to={"/cart"}>
+                  <ShoppingCartIcon size={36} />
+                </Link>
               </span>
               <span>
-                <UserIcon size={36} />
+                <Link to={"/profile"}>
+                  <UserIcon size={36} />
+                </Link>
               </span>
             </div>
           </div>
