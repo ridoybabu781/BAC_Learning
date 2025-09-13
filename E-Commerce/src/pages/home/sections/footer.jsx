@@ -85,9 +85,9 @@ export default function Footer(params) {
                 className='bg-gray-950 bg-no-repeat bg-cover '
                 style={{ backgroundImage: `url(${footerBg})` }}
             >
-                <div className=' container m-auto text-white grid grid-cols-5 py-24 gap-24'>
+                <div className=' container m-auto text-white grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 p-12 py-24 lg:gap-12 gap-24'>
                     {/* footer about  */}
-                    <div className='space-y-5'>
+                    <div className='space-y-5 '>
                         <Logo />
                         <p className='text-gray-400'>
                             Morbi cursus porttitor enim lobortis molestie. Duis
@@ -125,9 +125,9 @@ export default function Footer(params) {
                             Download Mobile App
                         </h3>
                         <div className='h-1 w-8 bg-primary rounded-full'></div>
-                        <div className="flex items-center justify-between gap-4">
-                            <img src='/images/App Store.png' alt='' />
-                            <img src='/images/Google Play.png' alt='' />
+                        <div className="flex justify-between gap-4 lg:flex-col">
+                            <img className="lg:w-3/4" src='/images/App Store.png' alt='' />
+                            <img className="lg:w-3/4" src='/images/Google Play.png' alt='' />
                         </div>
                     </div>
                 </div>
