@@ -1,6 +1,6 @@
 import { CaretRightIcon, HouseIcon, StarIcon } from "@phosphor-icons/react";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ProductCard from "../../components/ProductCard";
 import productStore from "../../store/productStore";
 
@@ -45,7 +45,7 @@ export default function SingleProduct() {
                 <div className='bg-[url(/images/shopHero.jpg)]'>
                     <div className=' backdrop-brightness-50 text-white w-full'>
                         <div className=" py-12 px-12 flex  items-center gap-4 text-xl container m-auto '  ">
-                            <HouseIcon /> Home <CaretRightIcon /> Product
+                            <HouseIcon /> Home <CaretRightIcon /> <Link to={'/product'} className="cursor-pointer hover:underline"> Products </Link>
                             <CaretRightIcon /> {product.name}
                         </div>
                     </div>
