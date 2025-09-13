@@ -13,13 +13,13 @@ export default function CartPage() {
           id: "1009",
           name: "Green Capsicum",
           price: { discounted_price: 14.0 },
-          images: ["/images/product/green-capsicum.png"],
+          images: ["/images/product/green-capsicum.jpg"],
         },
         {
           id: "1010",
           name: "Red Capsicum",
           price: { discounted_price: 14.0 },
-          images: ["/images/product/red-capsicum.png"],
+          images: ["/images/product/red-capsicum.jpg"],
         },
       ];
       setProducts(data);
