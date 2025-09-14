@@ -27,7 +27,7 @@ export default function CategoryProduct() {
   }, []);
 
   return (
-    <div>
+    <div className="w-7xl m-auto my-6">
       <div className="bg-[url(/images/shopHero.jpg)]">
         <div className=" backdrop-brightness-50 text-white w-full">
           <div className=" py-12 px-12 flex  items-center gap-4 text-xl container m-auto '  ">
