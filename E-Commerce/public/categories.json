@@ -1,38 +1,50 @@
 [
   {
     "id": "1",
-    "name": "Fresh Fruits",
+    "title": "Fruits",
     "description": "Fresh, perishable fruits and vegetables.",
-    "products_count": 165
+    "productCount": 165,
+    "image": "/images/category-icons/fruits 1.png",
+    "link": "/fruits"
   },
   {
     "id": "2",
-    "name": "Fish",
+    "title": "Fish",
     "description": "Fresh seafood including fish and shrimp.",
-    "products_count": 137
+    "productCount": 137,
+    "image": "/images/category-icons/fish 1.png",
+    "link": "/fish"
   },
   {
     "id": "3",
-    "name": "Vegetables",
+    "title": "Vegetables",
     "description": "Fresh, organic, healthy vegetables.",
-    "products_count": 34
+    "productCount": 34,
+    "image": "/images/category-icons/vegetables.png",
+    "link": "/vegetables"
   },
   {
     "id": "4",
-    "name": "Meat",
+    "title": "Meat",
     "description": "Premium cuts of beef, chicken, and pork.",
-    "products_count": 165
+    "productCount": 165,
+    "image": "/images/category-icons/meat 1.png",
+    "link": "/meat"
   },
   {
     "id": "5",
-    "name": "Drinks",
+    "title": "Drinks",
     "description": "Hydrating beverages like water and juices.",
-    "products_count": 48
+    "productCount": 48,
+    "image": "/images/category-icons/soft-drink 1.png",
+    "link": "/drinks"
   },
   {
     "id": "6",
-    "name": "Snacks",
+    "title": "Snacks",
     "description": "Crunchy and tasty chips, nuts, and more.",
-    "products_count": 165
+    "productCount": 165,
+    "image": "/images/category-icons/snacks 1.png",
+    "link": "/snacks"
   }
 ]

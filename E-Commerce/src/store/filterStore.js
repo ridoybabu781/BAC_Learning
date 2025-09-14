@@ -1,15 +1,19 @@
-const { create } = require("zustand");
+import { create } from "zustand";
 
 const filterStore = create((set) => {
   return {
-    category: "All",
-    sortBy: null,
-    rating: null,
+    category: "",
     min: 0,
-    max: 1000,
+    max: 0,
+    rating: 0,
+    activeTag: "",
 
     setCategory: (cat) => set(() => ({ category: cat })),
-    setSortBy: (sort) => set(() => ({ sortBy: sort })),
+    setMin: (min) => set(() => ({ min })),
+    setMax: (max) => set(() => ({ max })),
     setRating: (rate) => set(() => ({ rating: rate })),
+    setActiveTag: (tag) => set(() => ({ activeTag: tag })),
   };
 });
+
+export default filterStore;

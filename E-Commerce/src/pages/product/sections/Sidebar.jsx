@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import filterIcon from "/images/features/Filter24px.png";
 import { StarIcon } from "@phosphor-icons/react";
+import filterStore from "../../../store/filterStore";
 
 const tags = [
   "Healthy",
@@ -19,10 +20,19 @@ const tags = [
 ];
 
 export default function Sidebar() {
-  const [productss, setProductss] = useState();
+  const [productss, setProductss] = useState([]);
   const [categories, setCategories] = useState();
   const [showFilter, setShowFilter] = useState(false);
-  const [activeTag, setActiveTag] = useState("Low fat");
+  const {
+    setCategory,
+    min,
+    setMin,
+    max,
+    setMax,
+    setRating,
+    activeTag,
+    setActiveTag,
+  } = filterStore();
 
   useEffect(() => {
     fetch("/product.json")
@@ -77,10 +87,11 @@ export default function Sidebar() {
                   id={`category-${category.id}`}
                   name="categories"
                   type="radio"
-                  value={category.name}
+                  onChange={() => setCategory(category.title)}
+                  value={category.title}
                 />
                 <label htmlFor={`category-${category.id}`}>
-                  {category.name}
+                  {category.title}
                 </label>
               </div>
             ))}
@@ -93,11 +104,15 @@ export default function Sidebar() {
           <input
             type="number"
             placeholder="Min"
+            value={min}
+            onChange={(e) => setMin(Number(e.target.value))}
             className="w-1/2 border rounded-full px-3 py-1"
           />
           <input
             type="number"
             placeholder="Max"
+            value={max}
+            onChange={(e) => setMax(Number(e.target.value))}
             className="w-1/2 border rounded-full px-3 py-1"
           />
         </div>
@@ -108,7 +123,13 @@ export default function Sidebar() {
         <div className="flex flex-col gap-2 ">
           {[5, 4, 3, 2, 1].map((rating) => (
             <div key={rating} className="flex items-center gap-2">
-              <input type="checkbox" id={`rating${rating}`} value={rating} />
+              <input
+                type="radio"
+                name="rating"
+                id={`rating${rating}`}
+                value={rating}
+                onChange={(e) => setRating(Number(e.target.value))}
+              />
               <label htmlFor={`rating${rating}`} className="flex gap-1">
                 {[...Array(rating)].map((_, i) => (
                   <StarIcon key={i} size={20} weight="fill" color="#facc15" />

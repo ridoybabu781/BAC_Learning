@@ -20,7 +20,7 @@
       "nutrition": "Rich in carbohydrates and potassium."
     },
     "images": ["/images/product/big-potatoes.jpg"],
-    "rating": { "average": 4.5, "count": 95 }
+    "rating": { "average": 3.5, "count": 95 }
   },
   {
     "id": "1002",

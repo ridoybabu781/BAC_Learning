@@ -1,13 +1,8 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 import SectionTitleBar from "../components/sectionTitleBar";
 import { Link } from "react-router-dom";
-import vegetable from "/images/category-icons/vegetables.png";
-import fruits from "/images/category-icons/fruits 1.png";
-import fish from "/images/category-icons/fish 1.png";
-import meat from "/images/category-icons/meat 1.png";
-import drinks from "/images/category-icons/soft-drink 1.png";
-import snacks from "/images/category-icons/snacks 1.png";
-import { useRef } from "react";
+
+import { useEffect, useRef, useState } from "react";
 
 import sectionBg from "/images/BG2.png";
 
@@ -22,45 +17,18 @@ let CategoryCard = ({ data }) => {
   );
 };
 
-let categories = [
-  {
-    image: vegetable,
-    title: "Vegetables",
-    productCount: 129,
-    link: "/Vegetables",
-  },
-  {
-    image: fruits,
-    title: "Fresh Fruit",
-    productCount: 137,
-    link: "/fruits",
-  },
-  {
-    image: fish,
-    title: "Fish",
-    productCount: 34,
-    link: "/fish",
-  },
-  {
-    image: meat,
-    title: "Meat",
-    productCount: 165,
-    link: "/meat",
-  },
-  {
-    image: drinks,
-    title: "Water and Drinks",
-    link: "/drinks",
-  },
-  {
-    image: snacks,
-    title: "Snacks",
-    productCount: 165,
-    link: "/snacks",
-  },
-];
-
 let ShopByCategory = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const res = await fetch("/categories.json");
+      const data = await res.json();
+      setCategories(data);
+    };
+    fetchCategories();
+  });
+
   let scrollContainerRef = useRef(null);
   let scrollFactor = 200;
 

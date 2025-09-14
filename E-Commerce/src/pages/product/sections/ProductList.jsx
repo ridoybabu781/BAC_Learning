@@ -1,24 +1,47 @@
 import ProductCard from "../../../components/ProductCard.jsx";
 
 import { useEffect, useState } from "react";
+import filterStore from "../../../store/filterStore.js";
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
-
-  const itemsPerPage = 12;
-  const [currentPage, setCurrentPage] = useState(1);
+  const { category, min, max, rating, activeTag } = filterStore();
 
   useEffect(() => {
     fetch("/product.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-  const totalPages = Math.ceil(products.length / itemsPerPage);
 
+  const filteredProducts = products.filter((p) => {
+    if (category && p.category !== category) {
+      return false;
+    }
+    if (min && p.price.discounted_price < min) {
+      return false;
+    }
+    if (max && p.price.discounted_price > max) {
+      return false;
+    }
+
+    if (rating && p.rating < rating) {
+      return false;
+    }
+
+    if (activeTag && p.tags.includes(activeTag)) {
+      return false;
+    }
+
+    return true;
+  });
+
+  const itemsPerPage = 12;
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(products.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const currentProducts = products.slice(startIndex, endIndex);
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
 
   console.log(products);
 
