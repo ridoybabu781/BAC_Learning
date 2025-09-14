@@ -34,7 +34,7 @@ let ProductCard = ({ product }) => {
               return (
                 <StarIcon
                   color="#facc15"
-                  weight={index < rating ? "fill" : "regular"}
+                  className={`${index < rating ? "bg-amber-300" : ""}`}
                   size={14}
                   key={index}
                 />
