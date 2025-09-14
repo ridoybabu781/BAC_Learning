@@ -5,6 +5,8 @@ import {
   TwitterLogoIcon,
   InstagramLogoIcon,
   PinterestLogoIcon,
+  HouseIcon,
+  CaretRightIcon,
 } from "@phosphor-icons/react";
 
 const WishList = () => {
@@ -22,7 +24,14 @@ const WishList = () => {
 
   return (
     <div className="p-4 sm:p-8 bg-gray-100 min-h-screen ">
-      <h2 className="text-3xl text-center font-bold mb-6">My Wishlist</h2>
+      <div className="bg-[url(/images/shopHero.jpg)]">
+        <div className=" backdrop-brightness-50 text-white w-full">
+          <div className=" py-12 px-12 flex  items-center gap-4 text-xl container m-auto '  ">
+            <HouseIcon /> Account <CaretRightIcon /> Wishlist
+          </div>
+        </div>
+      </div>
+      <h2 className="text-3xl text-center font-bold my-6">My Wishlist</h2>
       <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-7xl m-auto">
         {products.map((product) => {
           const discountedPrice = parseFloat(

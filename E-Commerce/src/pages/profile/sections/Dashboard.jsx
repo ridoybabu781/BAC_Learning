@@ -1,11 +1,11 @@
+import { CaretRightIcon, HouseIcon } from "@phosphor-icons/react";
 import React from "react";
 
 const userData = {
   user: {
-    name: "Dianne Russell",
+    name: "Ridoy Babu",
     role: "Customer",
-    profileImage:
-      "https://images.unsplash.com/photo-1534528736611-30d8d067c87c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    profileImage: "/images/profile.jpg",
   },
   billingAddress: {
     name: "Dainne Russell",

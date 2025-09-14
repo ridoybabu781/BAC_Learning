@@ -1,6 +1,8 @@
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React, { useState, useEffect } from "react";
+import { HouseIcon, CaretRightIcon } from "@phosphor-icons/react";
 
 export default function CartPage() {
   const [products, setProducts] = useState([]);
@@ -70,8 +72,15 @@ export default function CartPage() {
 
   return (
     <div className="bg-white min-h-screen p-4 md:p-8">
+      <div className="bg-[url(/images/shopHero.jpg)]">
+        <div className=" backdrop-brightness-50 text-white w-full">
+          <div className=" py-12 px-12 flex  items-center gap-4 text-xl container m-auto '  ">
+            <HouseIcon /> Account <CaretRightIcon /> Cart
+          </div>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">
+        <h2 className="text-3xl font-bold text-center my-8">
           My Shopping Cart
         </h2>
 
