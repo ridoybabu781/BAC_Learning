@@ -29,34 +29,6 @@ const userData = {
       itemCount: 1,
       status: "on the way",
     },
-    {
-      orderId: "#130",
-      date: "22 Oct, 2020",
-      total: 250.0,
-      itemCount: 4,
-      status: "Completed",
-    },
-    {
-      orderId: "#561",
-      date: "1 Feb, 2020",
-      total: 35.0,
-      itemCount: 1,
-      status: "Completed",
-    },
-    {
-      orderId: "#536",
-      date: "21 Sep, 2020",
-      total: 578.0,
-      itemCount: 13,
-      status: "Completed",
-    },
-    {
-      orderId: "#492",
-      date: "22 Oct, 2020",
-      total: 345.0,
-      itemCount: 7,
-      status: "Completed",
-    },
   ],
 };
 

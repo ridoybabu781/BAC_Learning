@@ -8,7 +8,6 @@ import { Logo } from "../logo";
 import footerBg from "/images/footer-bg.png";
 
 let Section = ({ title, links }) => {
-  console.log(links);
   return (
     <div className="space-y-4">
       <h3 className="text-xl font-light"> {title} </h3>
