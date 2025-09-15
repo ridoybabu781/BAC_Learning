@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/layout/Navbar";
 import Home from "./pages/home/Home";
 import TopBar from "./components/layout/TopBar";
@@ -13,8 +13,19 @@ import WishList from "./pages/wishlist/WishList";
 import Footer from "./components/layout/footer";
 import Profile from "./pages/profile/Profile";
 import CategoryProduct from "./pages/categoryProducts/CategoryProduct";
+import authUser from "./store/user.store";
 
 export default function App() {
+  const { profile } = authUser();
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      await profile();
+    };
+
+    fetchUser();
+  }, []);
+
   return (
     <div>
       <TopBar />

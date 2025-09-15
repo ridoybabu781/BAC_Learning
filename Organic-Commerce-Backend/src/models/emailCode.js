@@ -8,13 +8,20 @@ const emailCode = new mongoose.Schema(
     },
     verificationCode: {
       type: Number,
-      min: 6,
       required: true,
     },
     expiresIn: {
       type: Date,
       required: true,
+      index: { expires: 0 },
+    },
+    verified: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true }
 );
+
+const Code = mongoose.model("EmailCode", emailCode);
+module.exports = Code;
