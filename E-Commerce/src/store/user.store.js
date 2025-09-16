@@ -1,0 +1,351 @@
+import { create } from "zustand";
+import axiosInstance from "../api/axiosInstance";
+
+const authUser = create((set) => {
+  return {
+    user: null,
+    loading: false,
+    error: null,
+    message: "",
+    token: null,
+    profilePic: null,
+    coverPic: null,
+    agencies: [],
+    blockedProfiles: [],
+
+    sendCode: async (email) => {
+      set({ loading: true, error: null });
+
+      try {
+        let res = await axiosInstance.post("/auth/sendVerificationCode", {
+          email,
+        });
+        set({ message: res.data.message, error: null, loading: false });
+        return { success: true };
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+        return { success: false };
+      }
+    },
+    verifyCode: async (email, verificationCode) => {
+      set({ loading: true, error: null });
+
+      try {
+        let res = await axiosInstance.post("/auth/verifyEmail", {
+          email,
+          verificationCode,
+        });
+        set({ message: res.data.message, error: null, loading: false });
+        return { success: true };
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+        return { success: false };
+      }
+    },
+
+    createUser: async (name, email, password, role) => {
+      set({ loading: true, error: null });
+
+      try {
+        let res = await axiosInstance.post("/auth/register", {
+          name,
+          email,
+          password,
+          role,
+        });
+        set({
+          user: res.data.user,
+          token: res.data.token,
+          message: res.data.message,
+          error: null,
+          loading: false,
+        });
+        localStorage.setItem("token", authUser.getState().token);
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    login: async (email, password) => {
+      set({ loading: true, error: null });
+
+      try {
+        const res = await axiosInstance.post("/auth/login", {
+          email,
+          password,
+        });
+        set({
+          user: res.data.user,
+          message: res.data.message,
+          loading: false,
+          error: null,
+        });
+        localStorage.setItem("token", authUser.getState().token);
+      } catch (error) {
+        set({
+          user: null,
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    profile: async () => {
+      set({ loading: true, error: null });
+
+      try {
+        const res = await axiosInstance.get("/auth/profile");
+        set({
+          user: res.data.user,
+          message: res.data.message,
+          loading: false,
+          error: null,
+        });
+      } catch (error) {
+        console.warn("User not logged in or session expired.");
+        set({
+          user: null,
+          loading: false,
+        });
+      }
+    },
+    getAllAgencies: async () => {
+      try {
+        const res = await axiosInstance.get("/auth/getAllAgencies");
+
+        set({ agencies: res.data.agencies });
+        return res;
+      } catch (error) {
+        set({
+          user: null,
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    logout: async () => {
+      set({ loading: true, error: null });
+
+      try {
+        const res = await axiosInstance.post("/auth/logout");
+        set({
+          user: null,
+          error: null,
+          loading: false,
+          message: res.data.message,
+        });
+        localStorage.removeItem("token");
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    setProfile: (file) => set({ profilePic: file }),
+    updateProfilePicture: async () => {
+      try {
+        const file = authUser.getState().profilePic;
+        if (!file) {
+          set({ error: "Image Not found" });
+        }
+        let formData = new FormData();
+        formData.append("profilePic", file);
+
+        set({ loading: true, error: null });
+
+        const res = await axiosInstance.put(
+          "/auth/updateProfilePicture",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        set({
+          user: res.data.user,
+          loading: false,
+          error: null,
+          message: res.data.message,
+        });
+        return res;
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+    setCover: (file) => set({ coverPic: file }),
+    updateCoverPicture: async () => {
+      try {
+        const file = authUser.getState().coverPic;
+        if (!file) {
+          set({ error: "Image Not found" });
+        }
+        let formData = new FormData();
+        formData.append("coverPic", file);
+
+        set({ loading: true, error: null });
+
+        const res = await axiosInstance.put(
+          "/auth/updateCoverPicture",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+
+        set({
+          user: res.data.user,
+          loading: false,
+          error: null,
+          message: res.data.message,
+        });
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    updateProfile: async (formData) => {
+      try {
+        set({ loading: true, error: null });
+
+        const res = await axiosInstance.put("/auth/updateProfile", formData);
+        set({ user: res.data.user, loading: false, message: res.data.message });
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    updatePassword: async (oldPass, newPass) => {
+      set({ loading: true, error: null });
+      try {
+        const res = await axiosInstance.put("/auth/updatePassword", {
+          oldPass,
+          newPass,
+        });
+        set({ message: res.data.message, loading: false });
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    forgetPasswordCode: async (email) => {
+      set({ loading: true, error: null });
+
+      try {
+        const res = await axiosInstance.post("/auth/sendForgetPassCode", {
+          email,
+        });
+        set({ message: res.data.message, loading: false });
+        return { success: true };
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+        return { success: false };
+      }
+    },
+
+    forgetPassword: async (email, verificationCode, newPassword) => {
+      set({ loading: true, error: null });
+      try {
+        const res = await axiosInstance.post("/auth/forgetPassword", {
+          email,
+          verificationCode,
+          newPassword,
+        });
+        set({ message: res.data.message, loading: false });
+        return { success: true };
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+        return { success: false };
+      }
+    },
+
+    deleteProfile: async (id) => {
+      try {
+        const res = await axiosInstance.delete(`/auth/deleteProfile/${id}`);
+        set({ message: res.data.message });
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    blockProfile: async (id) => {
+      try {
+        const res = await axiosInstance.put(`/auth/blockProfile/${id}`);
+        set({ message: res.data.message });
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    unBlockProfile: async (id) => {
+      try {
+        const res = await axiosInstance.put(`/auth/unBlockProfile/${id}`);
+        set({ message: res.data.message });
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    getBlockedProfiles: async () => {
+      try {
+        const res = await axiosInstance.get(`/auth/getBlockedProfiles`);
+        set({
+          message: res.data.message,
+          blockedProfiles: res.data.blockedProfiles || [],
+        });
+        return res;
+      } catch (error) {
+        set({
+          blockedProfiles: [],
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+      }
+    },
+
+    resetMessage: () => set({ error: null, message: null }),
+  };
+});
+
+export default authUser;

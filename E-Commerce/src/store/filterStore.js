@@ -3,25 +3,16 @@ import { create } from "zustand";
 const filterStore = create((set) => {
   return {
     category: "",
-    rating: null,
-    min: null,
-    max: null,
+    min: 0,
+    max: 0,
+    rating: 0,
     activeTag: "",
 
     setCategory: (cat) => set(() => ({ category: cat })),
-    setMin: (minPrice) => set(() => ({ min: minPrice })),
-    setMax: (maxPrice) => set(() => ({ max: maxPrice })),
+    setMin: (min) => set(() => ({ min })),
+    setMax: (max) => set(() => ({ max })),
     setRating: (rate) => set(() => ({ rating: rate })),
     setActiveTag: (tag) => set(() => ({ activeTag: tag })),
-
-    resetFilter: () =>
-      set({
-        category: "",
-        rating: null,
-        min: null,
-        max: null,
-        activeTag: "",
-      }),
   };
 });
 

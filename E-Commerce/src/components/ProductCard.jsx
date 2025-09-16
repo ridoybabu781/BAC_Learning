@@ -8,7 +8,7 @@ let ProductCard = ({ product }) => {
     price: { original_price },
     price: { discounted_price },
     images: [image],
-    rating = 3,
+    rating,
   } = product;
   return (
     <div
@@ -33,8 +33,8 @@ let ProductCard = ({ product }) => {
             {new Array(5).fill("").map((value, index) => {
               return (
                 <StarIcon
-                  color="gold"
-                  weight={rating > index ? "fill" : "regular"}
+                  color="#facc15"
+                  className={`${index < rating ? "bg-amber-300" : ""}`}
                   size={14}
                   key={index}
                 />

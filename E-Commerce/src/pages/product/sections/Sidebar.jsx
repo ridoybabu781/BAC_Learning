@@ -20,23 +20,18 @@ const tags = [
 ];
 
 export default function Sidebar() {
-  const [categories, setCategories] = useState([]);
-  const [showFilter, setShowFilter] = useState(false);
   const [productss, setProductss] = useState([]);
-
+  const [categories, setCategories] = useState();
+  const [showFilter, setShowFilter] = useState(false);
   const {
-    category,
-    rating,
-    min,
-    max,
-    activeTag,
-
     setCategory,
+    min,
     setMin,
+    max,
     setMax,
     setRating,
+    activeTag,
     setActiveTag,
-    resetFilter,
   } = filterStore();
 
   useEffect(() => {
@@ -92,10 +87,11 @@ export default function Sidebar() {
                   id={`category-${category.id}`}
                   name="categories"
                   type="radio"
-                  value={category.name}
+                  onChange={() => setCategory(category.title)}
+                  value={category.title}
                 />
                 <label htmlFor={`category-${category.id}`}>
-                  {category.name}
+                  {category.title}
                 </label>
               </div>
             ))}
@@ -108,11 +104,15 @@ export default function Sidebar() {
           <input
             type="number"
             placeholder="Min"
+            value={min}
+            onChange={(e) => setMin(Number(e.target.value))}
             className="w-1/2 border rounded-full px-3 py-1"
           />
           <input
             type="number"
             placeholder="Max"
+            value={max}
+            onChange={(e) => setMax(Number(e.target.value))}
             className="w-1/2 border rounded-full px-3 py-1"
           />
         </div>
@@ -128,6 +128,7 @@ export default function Sidebar() {
                 name="rating"
                 id={`rating${rating}`}
                 value={rating}
+                onChange={(e) => setRating(Number(e.target.value))}
               />
               <label htmlFor={`rating${rating}`} className="flex gap-1">
                 {[...Array(rating)].map((_, i) => (
