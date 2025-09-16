@@ -20,6 +20,8 @@ const authUser = create((set) => {
         let res = await axiosInstance.post("/auth/sendVerificationCode", {
           email,
         });
+        console.log(res);
+
         set({ message: res.data.message, error: null, loading: false });
         return { success: true };
       } catch (error) {

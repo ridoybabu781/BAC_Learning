@@ -15,6 +15,8 @@ const sendVerificationCode = async (req, res, next) => {
       return next(httpErrors(StatusCodes.NOT_FOUND, "Email not found"));
     }
 
+    console.log(email);
+
     const subject = "Your Organic-Commerce Verification Code";
 
     const code = Math.floor(100000 + Math.random() * 900000);

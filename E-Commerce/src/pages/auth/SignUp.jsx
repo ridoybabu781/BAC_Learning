@@ -21,14 +21,16 @@ export default function SignUp() {
     authUser();
 
   useEffect(() => {
-    setInterval(() => {
+    if (!message) return;
+    const timer = setTimeout(() => {
       resetMessage();
-    }, 3000);
-  }, [message]);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [resetMessage]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Clicked");
 
     await createUser(name, email, password, role);
   };
@@ -36,20 +38,20 @@ export default function SignUp() {
   const handleSendCode = async (e) => {
     e.preventDefault();
     if (!email) {
-      return alert("Please enter your email");
+      return console.log("Please enter your email");
     }
 
-    const sendCode = async () => {
-      const res = await sendCode(email);
-      if (
-        res.status !== 200 ||
-        res.status !== 201 ||
-        res.data.success === false
-      ) {
-        return alert("Failed to send verification code");
-      }
-      setIsVerifying(true);
-    };
+    const res = await sendCode(email);
+    if (
+      res.status !== 200 ||
+      res.status !== 201 ||
+      res.data.success === false
+    ) {
+      return console.log("Failed to send verification code");
+    }
+    setIsVerifying(true);
+
+    sendCode();
   };
 
   return (
