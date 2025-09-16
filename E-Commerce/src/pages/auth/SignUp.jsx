@@ -16,7 +16,9 @@ export default function SignUp() {
   const [role, setRole] = useState("user");
   const [verificationCode, setVerificationCode] = useState("");
   const [isVerified, setIsVerified] = useState(false);
-  const { createUser, message, resetMessage } = authUser();
+  const [isVerifying, setIsVerifying] = useState(false);
+  const { createUser, message, resetMessage, sendCode, verifyCode } =
+    authUser();
 
   useEffect(() => {
     setInterval(() => {
@@ -33,6 +35,21 @@ export default function SignUp() {
 
   const handleSendCode = async (e) => {
     e.preventDefault();
+    if (!email) {
+      return alert("Please enter your email");
+    }
+
+    const sendCode = async () => {
+      const res = await sendCode(email);
+      if (
+        res.status !== 200 ||
+        res.status !== 201 ||
+        res.data.success === false
+      ) {
+        return alert("Failed to send verification code");
+      }
+      setIsVerifying(true);
+    };
   };
 
   return (
@@ -65,12 +82,22 @@ export default function SignUp() {
               placeholder="Email"
               className="w-full border px-6 py-4 rounded-full border-gray-300  focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            {!isVerified ? (
-              <button onClick={handleSendCode}>
+            {!isVerifying ? (
+              <button
+                onClick={handleSendCode}
+                className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition w-full"
+              >
                 Send email verification code
               </button>
             ) : (
-              <div></div>
+              <div>
+                <input
+                  type="text"
+                  name="verificationCode"
+                  value={verificationCode}
+                  onChange={(e) => setVerificationCode(e.target.value)}
+                />
+              </div>
             )}
             <div className="relative">
               <input
