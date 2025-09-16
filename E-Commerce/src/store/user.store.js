@@ -17,7 +17,27 @@ const authUser = create((set) => {
       set({ loading: true, error: null });
 
       try {
-        let res = await axiosInstance.post("/auth/sendCode", { email });
+        let res = await axiosInstance.post("/auth/sendVerificationCode", {
+          email,
+        });
+        set({ message: res.data.message, error: null, loading: false });
+        return { success: true };
+      } catch (error) {
+        set({
+          error: error.response?.data?.message || error.message,
+          loading: false,
+        });
+        return { success: false };
+      }
+    },
+    verifyCode: async (email, verificationCode) => {
+      set({ loading: true, error: null });
+
+      try {
+        let res = await axiosInstance.post("/auth/verifyEmail", {
+          email,
+          verificationCode,
+        });
         set({ message: res.data.message, error: null, loading: false });
         return { success: true };
       } catch (error) {
@@ -29,7 +49,7 @@ const authUser = create((set) => {
       }
     },
 
-    createUser: async (name, email, password, verificationCode, role) => {
+    createUser: async (name, email, password, role) => {
       set({ loading: true, error: null });
 
       try {
@@ -37,7 +57,6 @@ const authUser = create((set) => {
           name,
           email,
           password,
-          verificationCode,
           role,
         });
         set({
