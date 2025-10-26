@@ -46,6 +46,14 @@ export default function Sidebar() {
 
   const products = productss?.slice(0, 3);
 
+  const resetFilter = () => {
+    setCategory(null);
+    setMin(null);
+    setMax(null);
+    setRating(null);
+    setActiveTag(null);
+  };
+
   return (
     <div>
       <button

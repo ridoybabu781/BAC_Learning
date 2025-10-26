@@ -13,18 +13,18 @@ import WishList from "./pages/wishlist/WishList";
 import Footer from "./components/layout/footer";
 import Profile from "./pages/profile/Profile";
 import CategoryProduct from "./pages/categoryProducts/CategoryProduct";
-import authUser from "./store/user.store";
+// import authUser from "./store/user.store";
 
 export default function App() {
-  const { profile } = authUser();
+  // const { profile } = authUser();
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      await profile();
-    };
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     await profile();
+  //   };
 
-    fetchUser();
-  }, []);
+  //   fetchUser();
+  // }, []);
 
   return (
     <div>
