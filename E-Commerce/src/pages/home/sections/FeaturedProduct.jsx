@@ -18,7 +18,7 @@ export default function FeaturedProduct() {
 
   return (
     <section className="container m-auto mb-12">
-      <SectionTitleBar title={"Featured Product"} nextPageLink={""} />
+      <SectionTitleBar title={"Featured Product"} nextPageLink={"/product"} />
       {featuredProdct?.length === 0 ? (
         <ProductNotFound />
       ) : (
