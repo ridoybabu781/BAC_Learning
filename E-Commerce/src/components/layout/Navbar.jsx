@@ -33,7 +33,7 @@ export default function Navbar() {
           <div className="lg:hidden" onClick={() => setNavBarOpen(true)}>
             <ListIcon size={32} />
           </div>
-          a
+        
           <div
             className={
               "fixed top-0 left-0 bg-white  h-full space-y-12 flex flex-col  justify-between lg:hidden overflow-hidden transition-all " +
