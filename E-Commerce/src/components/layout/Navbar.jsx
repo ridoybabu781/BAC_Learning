@@ -33,7 +33,7 @@ export default function Navbar() {
           <div className="lg:hidden" onClick={() => setNavBarOpen(true)}>
             <ListIcon size={32} />
           </div>
-
+          a
           <div
             className={
               "fixed top-0 left-0 bg-white  h-full space-y-12 flex flex-col  justify-between lg:hidden overflow-hidden transition-all " +
@@ -91,9 +91,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-
           <Logo />
-
           <div className="  gap-7 hidden lg:flex">
             {navData.map((item, index) => {
               return (
@@ -101,13 +99,12 @@ export default function Navbar() {
                   className="space-x-2 text-gray-600 flex items-center gap-2"
                   key={index}
                 >
-                  <a href={item.link}> {item.name}</a>
+                  <Link to={item.link}> {item.name}</Link>
                   {item.downArray ? <CaretDownIcon size={16} /> : null}
                 </div>
               );
             })}
           </div>
-
           <div className="flex items-center gap-10">
             <div className="gap-5 hidden xl:block">
               <button className="flex items-center gap-2">
